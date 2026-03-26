@@ -17,8 +17,8 @@ export default function Atlas() {
       audience="Municipal building departments, planning boards, zoning professionals, and land-use consultants."
       goal="Turn zoning research and land-use review from a manual, scattered process into a structured, searchable, code-linked workflow — built by someone who does this work every day."
       solves="Replaces manual zoning lookups, paper-based review processes, and fragmented regulatory data with searchable, structured intelligence that connects directly to municipal code."
-      ctaLabel="Explore Atlas"
-      ctaHref="https://land-use-atlas.vercel.app"
+      ctaLabel="Open Full Atlas Site"
+      ctaHref="https://atlas.abzalinnovation.com/"
       highlights={[
         {
           title: "Zoning Analysis",
