@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.claude/
+
+desktop.ini
+.DS_Store
+Thumbs.db
+*.log
+
+Abzal Innovation Website/
+preview.html
+ms4_platform_mockups.jsx
+MS4_Stormwater_Platform_Build_Specification.pdf
