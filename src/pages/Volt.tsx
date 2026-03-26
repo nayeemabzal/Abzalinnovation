@@ -17,8 +17,8 @@ export default function Volt() {
       audience="Electrical contractors, shops, and service companies of all sizes."
       goal="Give electrical contractors a single platform to manage estimates, projects, finances, inspections, and crews — so they can run their entire business from one place instead of five disconnected tools."
       solves="Replaces the stack of spreadsheets, paper forms, and disconnected apps that most electrical contractors use to manage estimates, projects, finances, inspections, and crews."
-      ctaLabel="Explore Volt"
-      ctaHref="https://sparktrack-pro-ui.vercel.app/"
+      ctaLabel="Open Full Volt Site"
+      ctaHref="https://volt.abzalinnovation.com/"
       highlights={[
         {
           title: "Estimates & Proposals",
