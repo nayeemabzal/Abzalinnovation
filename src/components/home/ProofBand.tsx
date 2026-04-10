@@ -1,41 +1,41 @@
 const stats = [
   {
-    value: "3",
-    label: "Product lines",
-    sub: "Volt · Build · Atlas",
-  },
-  {
     value: "2",
-    label: "Live experiences",
-    sub: "Volt + Atlas are active today",
+    label: "Live products",
+    sub: "Volt and Atlas are available today",
   },
   {
-    value: "2",
-    label: "Professional licenses behind it",
-    sub: "Master Electrician · Building Inspector",
+    value: "Town of Glenville, NY",
+    label: "Municipal launch",
+    sub: "Atlas is live for a real municipality",
   },
   {
-    value: "100%",
-    label: "Shared architecture",
-    sub: "One ecosystem, one design system",
+    value: "Build waitlist",
+    label: "Open now",
+    sub: "Construction teams can request early access",
+  },
+  {
+    value: "Founder-led",
+    label: "Field + municipal experience",
+    sub: "Master Electrician and Town Building Inspector",
   },
 ];
 
 const principles = [
   {
-    title: "Real workflows, not abstractions",
+    title: "Grounded in real work",
     description:
-      "Every feature is shaped by work I've actually done — on jobsites, in inspections, behind a permit counter.",
+      "Abzal products are shaped by electrical, construction, and municipal workflows the company knows firsthand.",
   },
   {
-    title: "Premium without the enterprise bloat",
+    title: "Clear by design",
     description:
-      "The polish and depth of Linear or Vercel, without the pricing or complexity of Procore or BuilderTrend.",
+      "The goal is software that feels modern, fast, and premium without enterprise bloat or generic workflows.",
   },
   {
-    title: "Built to grow with you",
+    title: "Focused products, shared ecosystem",
     description:
-      "Start with one product. Add another when you need it. Everything shares data, design, and DNA.",
+      "Each product solves a specific problem while still fitting into a broader Abzal ecosystem as the portfolio grows.",
   },
 ];
 
@@ -64,12 +64,13 @@ export default function ProofBand() {
             Built on real experience
           </div>
           <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-white">
-            A software company run by someone who's been on your side of the counter.
+            Built by someone who knows the field and the permit counter.
           </h2>
           <p className="mt-4 text-[17px] leading-[1.65] text-white/60">
             Abzal Innovation exists because the tools our industries rely on
             weren't good enough. Every product is held to the same standard
-            I'd hold a finished panel or a closing inspection.
+            the team would expect from finished work in the field or a final
+            review at the counter.
           </p>
         </div>
 

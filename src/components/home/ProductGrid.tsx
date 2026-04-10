@@ -114,11 +114,12 @@ export default function ProductGrid() {
             Our Products
           </div>
           <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
-            Three products. One mission.
+            Start with what's live now.
           </h2>
           <p className="mt-3 text-[17px] leading-[1.65] text-slate-600">
-            Each product targets a specific vertical in the built environment
-            with domain-specific workflows that generic software can't match.
+            Volt and Land Use Atlas are available today, and Build is open for
+            early-interest conversations while the product continues to take
+            shape.
           </p>
         </div>
 
