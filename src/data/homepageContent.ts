@@ -68,7 +68,7 @@ export const solutions: Solution[] = [
     tagline: "Construction project management",
     description:
       "Project tracking, budgets, scheduling, and field coordination for builders, renovators, and flippers who need tighter control over every job.",
-    accent: "#ff7e34",
+    accent: "#059669",
     href: "/build",
     ctaLabel: "Learn more",
     icon: "hardhat",
@@ -79,7 +79,7 @@ export const solutions: Solution[] = [
     tagline: "Zoning & municipal intelligence",
     description:
       "Zoning analysis, parcel research, district comparison, and code-linked workflows for planners, municipalities, and land-use professionals.",
-    accent: "#1cbe94",
+    accent: "#d97706",
     href: "/atlas",
     ctaLabel: "Learn more",
     icon: "map",
@@ -139,17 +139,17 @@ export const trustMarks: TrustMark[] = [
   {
     name: "ProBuild Solutions",
     descriptor: "Regional construction",
-    accent: "#ff7e34",
+    accent: "#059669",
   },
   {
-    name: "City of Glenville",
+    name: "Town of Glenville",
     descriptor: "Municipal planning",
-    accent: "#1cbe94",
+    accent: "#d97706",
   },
   {
     name: "Meridian Builders",
     descriptor: "Residential development",
-    accent: "#ff7e34",
+    accent: "#059669",
   },
 ];
 
@@ -473,7 +473,7 @@ export const pricingProducts: PricingProduct[] = [
     id: "build",
     name: "Abzal Build",
     tagline: "Construction project management",
-    accent: "#ff7e34",
+    accent: "#059669",
     tiers: [
       {
         id: "build-starter",
@@ -538,7 +538,7 @@ export const pricingProducts: PricingProduct[] = [
     id: "atlas",
     name: "Land Use Atlas",
     tagline: "Zoning & municipal intelligence",
-    accent: "#1cbe94",
+    accent: "#d97706",
     tiers: [
       {
         id: "atlas-professional",

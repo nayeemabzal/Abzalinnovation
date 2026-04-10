@@ -1,83 +1,168 @@
-import type { Solution } from "../../data/homepageContent";
-import { solutions } from "../../data/homepageContent";
+import type { ReactNode } from "react";
 import Link from "../site/Link";
 
-function SolutionIcon({ icon, accent }: { icon: Solution["icon"]; accent: string }) {
-  const icons = {
-    bolt: (
-      <svg className="h-4.5 w-4.5" viewBox="0 0 24 24" fill="white">
-        <path d="M13 2L5 13h5l-1 9 10-13h-6l1-7z" />
+type Theme = {
+  border: string;
+  iconBg: string;
+  iconColor: string;
+  tagline: string;
+  statusBg: string;
+  statusColor: string;
+  linkColor: string;
+};
+
+const themes: Record<string, Theme> = {
+  volt: {
+    border: "border-blue-200",
+    iconBg: "bg-blue-50",
+    iconColor: "text-blue-500",
+    tagline: "text-blue-600",
+    statusBg: "bg-blue-50",
+    statusColor: "text-blue-600",
+    linkColor: "text-blue-600",
+  },
+  build: {
+    border: "border-emerald-200",
+    iconBg: "bg-emerald-50",
+    iconColor: "text-emerald-500",
+    tagline: "text-emerald-600",
+    statusBg: "bg-emerald-50",
+    statusColor: "text-emerald-600",
+    linkColor: "text-emerald-600",
+  },
+  atlas: {
+    border: "border-amber-200",
+    iconBg: "bg-amber-50",
+    iconColor: "text-amber-500",
+    tagline: "text-amber-600",
+    statusBg: "bg-amber-50",
+    statusColor: "text-amber-600",
+    linkColor: "text-amber-600",
+  },
+};
+
+type Product = {
+  id: "volt" | "build" | "atlas";
+  name: string;
+  tagline: string;
+  description: string;
+  status: string;
+  price: string;
+  linkLabel: string;
+  linkHref: string;
+  icon: ReactNode;
+};
+
+const products: Product[] = [
+  {
+    id: "volt",
+    name: "Abzal Volt",
+    tagline: "Electrical Contractor Platform",
+    description:
+      "The operating platform for electrical contractors. Estimating, project tracking, inspections, crew hours, billing, and closeout in one workspace.",
+    status: "Available Now",
+    price: "Starting at $79/mo",
+    linkLabel: "Visit Volt",
+    linkHref: "https://volt.abzalinnovation.com",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    hardhat: (
-      <svg className="h-4.5 w-4.5" viewBox="0 0 24 24" fill="white">
-        <path d="M4.5 12.2l3-4.7h9l3 4.7v5.3h-15v-5.3z" />
-        <path d="M8 5.8A4 4 0 0116 5.8v.7H8v-.7z" opacity="0.7" />
+  },
+  {
+    id: "build",
+    name: "Abzal Build",
+    tagline: "General Construction Management",
+    description:
+      "Project management for general contractors. Scope tracking, subcontractor coordination, RFIs, submittals, and financial oversight.",
+    status: "Waitlist Open",
+    price: "Request early access",
+    linkLabel: "Join Waitlist",
+    linkHref: "/contact",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-4h6v4" />
       </svg>
     ),
-    map: (
-      <svg className="h-4.5 w-4.5" viewBox="0 0 24 24" fill="white">
-        <path d="M12 3.2c4 0 7 3.1 7 7.1 0 4.5-5 9.5-7 10.5-2-1-7-6-7-10.5 0-4 3-7.1 7-7.1z" />
-        <circle cx="12" cy="10.5" r="2.6" fill="white" opacity="0.5" />
+  },
+  {
+    id: "atlas",
+    name: "Land Use Atlas",
+    tagline: "Municipal Zoning & Land Use Tool",
+    description:
+      "Interactive zoning visualization for municipalities. Parcel-level data, overlay districts, variance tracking, and public-facing maps.",
+    status: "Available Now",
+    price: "Live for the Town of Glenville, NY",
+    linkLabel: "Visit Atlas",
+    linkHref: "https://atlas.abzalinnovation.com",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="10" r="3" />
+        <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 10-16 0c0 3 2.7 7 8 11.7z" />
       </svg>
     ),
-  };
-
-  return (
-    <span
-      className="flex h-9 w-9 items-center justify-center rounded-lg"
-      style={{ backgroundColor: accent }}
-    >
-      {icons[icon]}
-    </span>
-  );
-}
-
-function SolutionCard({ solution }: { solution: Solution }) {
-  return (
-    <article className="group glow-card rounded-xl border border-slate-200/60 bg-white p-5 shadow-card">
-      <div className="flex items-center gap-3">
-        <SolutionIcon accent={solution.accent} icon={solution.icon} />
-        <div>
-          <h3 className="text-[1.05rem] font-semibold tracking-[-0.02em] text-navy">
-            {solution.name}
-          </h3>
-          <div className="text-[0.74rem] font-medium text-text-muted">{solution.tagline}</div>
-        </div>
-      </div>
-
-      <p className="mt-3 flex-1 text-[0.86rem] leading-6 text-text-secondary">
-        {solution.description}
-      </p>
-
-      <Link
-        className="mt-4 inline-flex items-center gap-1.5 text-[0.84rem] font-semibold text-blue-600 group-hover:text-blue-700"
-        href={solution.href}
-      >
-        Learn more
-        <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
-      </Link>
-    </article>
-  );
-}
+  },
+];
 
 export default function ProductGrid() {
   return (
-    <section className="relative z-20 px-6 pt-4 sm:px-8 lg:px-8" id="solutions">
-      <div className="mx-auto max-w-[1120px]">
-        <div className="mb-6">
-          <div className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-muted">
+    <section className="bg-white px-6 py-20 lg:px-8" id="products">
+      <div className="mx-auto max-w-[1200px]">
+        <div className="mb-12 max-w-[640px]">
+          <div className="mb-3 text-[13px] font-bold uppercase tracking-[0.08em] text-blue-600">
             Our Products
           </div>
-          <h2 className="mt-2 text-[1.6rem] font-extrabold tracking-[-0.04em] text-navy">
-            Purpose-built tools for every stage of the work.
+          <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
+            Three products. One mission.
           </h2>
+          <p className="mt-3 text-[17px] leading-[1.65] text-slate-600">
+            Each product targets a specific vertical in the built environment
+            with domain-specific workflows that generic software can't match.
+          </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3 stagger-children">
-          {solutions.map((solution) => (
-            <SolutionCard key={solution.id} solution={solution} />
-          ))}
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => {
+            const theme = themes[p.id];
+            return (
+              <article
+                key={p.id}
+                className={`group flex flex-col overflow-hidden rounded-[20px] border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_36px_rgba(15,23,42,0.08)] ${theme.border}`}
+              >
+                <div className="px-7 pb-5 pt-8">
+                  <div
+                    className={`mb-4 flex h-12 w-12 items-center justify-center rounded-[14px] ${theme.iconBg} ${theme.iconColor}`}
+                  >
+                    <span className="block h-6 w-6">{p.icon}</span>
+                  </div>
+                  <h3 className="text-[22px] font-extrabold tracking-[-0.02em] text-navy">
+                    {p.name}
+                  </h3>
+                  <div className={`mb-3 text-[13px] font-semibold ${theme.tagline}`}>
+                    {p.tagline}
+                  </div>
+                  <p className="mb-5 text-[14px] leading-[1.6] text-slate-600">
+                    {p.description}
+                  </p>
+                  <span
+                    className={`inline-flex rounded-full px-[10px] py-1 text-[10px] font-bold uppercase tracking-[0.06em] ${theme.statusBg} ${theme.statusColor}`}
+                  >
+                    {p.status}
+                  </span>
+                </div>
+                <div className="mt-auto flex items-center justify-between border-t border-slate-100 px-7 py-5">
+                  <span className="text-[13px] text-slate-500">{p.price}</span>
+                  <Link
+                    className={`inline-flex items-center gap-1 text-[13px] font-semibold transition-all group-hover:gap-2 ${theme.linkColor}`}
+                    href={p.linkHref}
+                  >
+                    {p.linkLabel} <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

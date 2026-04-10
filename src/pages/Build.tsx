@@ -11,13 +11,13 @@ export default function Build() {
     <ProductOverview
       name="Abzal Build"
       tagline="Project management built for builders."
-      accent="#ff7e34"
+      accent="#059669"
       badgeLabel="Construction Project Management"
       description="Track projects, manage budgets, coordinate teams, and maintain full visibility across every job — designed for builders, renovators, and flippers."
       audience="General contractors, remodelers, renovators, flippers, and small builders."
       goal="Give builders and renovators full project-centered visibility across budgets, schedules, and field coordination — purpose-built for how construction actually works."
       solves="Replaces scattered project tracking, manual budget management, and disconnected field communication with a single platform built for how construction actually works."
-      ctaLabel="Explore Build"
+      ctaLabel="Join Build Waitlist"
       ctaHref="/contact"
       highlights={[
         {

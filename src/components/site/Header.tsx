@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { productLinks, siteNavigation } from "../../data/siteContent";
 import { solutions } from "../../data/homepageContent";
 import { getPathname } from "../../router";
@@ -8,45 +8,43 @@ import Link from "./Link";
 type BrandMarkProps = {
   compact?: boolean;
   dark?: boolean;
-  label?: string;
 };
 
-export function BrandMark({
-  compact = false,
-  dark = true,
-  label = "Abzal Innovation",
-}: BrandMarkProps) {
-  const textTone = dark ? "text-navy" : "text-white";
-  const ringTone = dark ? "border-slate-200 bg-white shadow-sm" : "border-white/16 bg-white/10";
+export function BrandMark({ compact = false, dark = false }: BrandMarkProps) {
+  const textTone = dark ? "text-white" : "text-navy";
+  const subTone = dark ? "text-slate-400" : "text-slate-400";
 
   return (
     <Link className="flex items-center gap-2.5" href="/">
       <span
-        className={`flex items-center justify-center rounded-lg border ${
-          compact ? "h-7 w-7" : "h-8 w-8"
-        } ${ringTone}`}
+        className={`relative flex items-center justify-center rounded-[10px] bg-gradient-to-br from-blue-600 to-blue-500 shadow-[0_2px_8px_rgba(37,99,235,0.25)] ${
+          compact ? "h-8 w-8" : "h-9 w-9"
+        }`}
       >
         <svg
           aria-hidden="true"
-          className={`${compact ? "h-3.5 w-3.5" : "h-4 w-4"} ${textTone}`}
-          fill="none"
+          className={compact ? "h-4 w-4" : "h-[18px] w-[18px]"}
           viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
-          <path
-            d="M5.5 16.75L9.3 8.8a3 3 0 015.4 0l3.8 7.95M8 14.7h8"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2.35"
-          />
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
         </svg>
       </span>
-      <span
-        className={`font-semibold tracking-[-0.03em] ${textTone} ${
-          compact ? "text-[0.88rem]" : "text-[1.05rem]"
-        }`}
-      >
-        {label}
+      <span className="flex flex-col leading-none">
+        <span
+          className={`font-display font-extrabold tracking-[-0.03em] ${textTone} ${
+            compact ? "text-[0.95rem]" : "text-[1.05rem]"
+          }`}
+        >
+          Abzal <span className="font-semibold text-blue-600">Innovation</span>
+        </span>
+        <span className={`mt-1 text-[0.66rem] font-medium tracking-wide ${subTone}`}>
+          Software for the teams that build everything
+        </span>
       </span>
     </Link>
   );
@@ -76,29 +74,29 @@ function ProductDropdown({ open }: { open: boolean }) {
   };
 
   return (
-    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-2">
-      <div className="w-[320px] rounded-xl border border-slate-200 bg-white p-1.5 shadow-elevated">
+    <div className="absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3">
+      <div className="w-[320px] rounded-2xl border border-slate-200 bg-white p-2 shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
         {solutions.map((s) => (
           <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-slate-50"
+            className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-slate-50"
             href={s.href}
             key={s.id}
           >
             <span
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-[10px] text-white"
               style={{ backgroundColor: s.accent }}
             >
               {icons[s.icon]}
             </span>
             <div>
-              <div className="text-[0.84rem] font-semibold text-navy">{s.name}</div>
-              <div className="text-[0.74rem] text-text-muted">{s.tagline}</div>
+              <div className="text-[0.86rem] font-semibold text-navy">{s.name}</div>
+              <div className="text-[0.74rem] text-slate-500">{s.tagline}</div>
             </div>
           </Link>
         ))}
         <div className="mt-1 border-t border-slate-100 pt-1">
           <Link
-            className="flex items-center gap-2 rounded-lg px-3 py-2 text-[0.8rem] font-medium text-text-muted hover:text-navy"
+            className="arrow-link flex items-center gap-2 rounded-xl px-3 py-2 text-[0.8rem] font-semibold text-slate-500 hover:text-navy"
             href="/products"
           >
             View all products <span aria-hidden="true">→</span>
@@ -119,10 +117,24 @@ function isActiveLink(href: string, pathname: string) {
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = getPathname();
 
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 16);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="relative z-30">
+    <header
+      className={`sticky top-0 z-30 transition-[background-color,border-color,backdrop-filter] duration-300 ${
+        scrolled
+          ? "border-b border-slate-200/60 bg-white/92 backdrop-blur-[16px] backdrop-saturate-[180%]"
+          : "border-b border-transparent bg-white/60 backdrop-blur-[12px]"
+      }`}
+    >
       <a
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-navy focus:shadow-elevated"
         href="#main-content"
@@ -130,10 +142,13 @@ export default function Header() {
         Skip to content
       </a>
 
-      <div className="mx-auto flex w-full max-w-[1120px] items-center justify-between gap-4 px-6 py-4 lg:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between gap-4 px-6 lg:px-8">
         <BrandMark />
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-0.5 lg:flex">
+        <nav
+          aria-label="Main navigation"
+          className="hidden items-center gap-1 rounded-full border border-slate-200 bg-white p-1 shadow-[0_1px_2px_rgba(15,23,42,0.03)] lg:flex"
+        >
           {siteNavigation.map((link) => {
             const active = isActiveLink(link.href, pathname);
             const isProducts = link.label === "Products";
@@ -146,16 +161,26 @@ export default function Header() {
                 onMouseLeave={() => isProducts && setProductsOpen(false)}
               >
                 <Link
-                  className={`inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-[0.88rem] font-medium transition-colors ${
-                    active ? "text-navy" : "text-text-secondary hover:text-navy"
+                  className={`inline-flex items-center gap-1 rounded-full px-4 py-[7px] text-[0.8rem] font-semibold transition-all ${
+                    active
+                      ? "bg-navy text-white"
+                      : "text-slate-600 hover:bg-slate-50 hover:text-navy"
                   }`}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
                 >
                   {link.label}
                   {isProducts && (
-                    <svg className={`h-3.5 w-3.5 opacity-50 transition-transform ${productsOpen ? "rotate-180" : ""}`} viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
+                    <svg
+                      className={`h-3 w-3 opacity-70 transition-transform ${productsOpen ? "rotate-180" : ""}`}
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                   )}
                 </Link>
@@ -167,17 +192,17 @@ export default function Header() {
 
         <div className="flex items-center gap-2">
           <Link
-            className="hidden items-center justify-center rounded-xl bg-navy px-4 py-2 text-[0.84rem] font-semibold text-white shadow-sm hover:bg-navy/90 sm:inline-flex"
-            href="/contact"
+            className="hidden items-center justify-center rounded-[10px] bg-navy px-4 py-2 text-[0.82rem] font-semibold text-white transition-all hover:-translate-y-px hover:bg-slate-800 hover:shadow-[0_6px_20px_rgba(15,23,42,0.2)] sm:inline-flex"
+            href="https://volt.abzalinnovation.com"
           >
-            Request a Demo
+            Open Volt
           </Link>
 
           <button
             aria-controls="mobile-site-nav"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 bg-white text-navy lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] border border-slate-200 bg-white text-navy lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             type="button"
           >
@@ -195,7 +220,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="px-6 pb-3 lg:hidden">
           <div
-            className="mx-auto w-full max-w-[1120px] rounded-xl border border-slate-200 bg-white p-3 shadow-elevated animate-slide-down"
+            className="mx-auto w-full max-w-[1200px] rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_60px_rgba(15,23,42,0.12)] animate-slide-down"
             id="mobile-site-nav"
             role="navigation"
             aria-label="Mobile navigation"
@@ -205,8 +230,8 @@ export default function Header() {
                 const active = isActiveLink(link.href, pathname);
                 return (
                   <Link
-                    className={`rounded-lg px-3 py-2 text-[0.88rem] font-semibold ${
-                      active ? "bg-slate-50 text-navy" : "text-text-secondary"
+                    className={`rounded-xl px-3 py-2 text-[0.88rem] font-semibold ${
+                      active ? "bg-slate-50 text-navy" : "text-slate-600"
                     }`}
                     href={link.href}
                     key={link.label}
@@ -218,10 +243,12 @@ export default function Header() {
                 );
               })}
               <div className="mt-1 border-t border-slate-100 pt-2">
-                <div className="px-3 pb-1 text-[0.72rem] font-semibold uppercase tracking-wider text-text-muted">Products</div>
+                <div className="px-3 pb-1 text-[0.7rem] font-bold uppercase tracking-wider text-slate-400">
+                  Products
+                </div>
                 {productLinks.map((link) => (
                   <Link
-                    className="block rounded-lg px-3 py-1.5 text-[0.86rem] font-medium text-text-secondary hover:text-navy"
+                    className="block rounded-xl px-3 py-1.5 text-[0.86rem] font-medium text-slate-600 hover:text-navy"
                     href={link.href}
                     key={link.label}
                     onClick={() => setMobileOpen(false)}
@@ -232,11 +259,11 @@ export default function Header() {
               </div>
             </nav>
             <Link
-              className="mt-2 flex w-full items-center justify-center rounded-xl bg-navy px-4 py-2.5 text-[0.84rem] font-semibold text-white sm:hidden"
-              href="/contact"
+              className="mt-3 flex w-full items-center justify-center rounded-[10px] bg-navy px-4 py-2.5 text-[0.84rem] font-semibold text-white sm:hidden"
+              href="https://volt.abzalinnovation.com"
               onClick={() => setMobileOpen(false)}
             >
-              Request a Demo
+              Open Volt
             </Link>
           </div>
         </div>

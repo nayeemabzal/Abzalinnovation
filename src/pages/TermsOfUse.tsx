@@ -4,7 +4,7 @@ import { termsSections } from "../data/siteContent";
 export default function TermsOfUse() {
   return (
     <LegalPageTemplate
-      description="Starter Terms of Use language for the Abzal Innovation website and future products, with placeholder sections that should be reviewed and finalized before launch."
+      description="Terms covering use of the Abzal Innovation website, product information, and any related digital services made available through the company."
       effectiveDate="March 19, 2026"
       eyebrow="Terms of Use"
       sections={termsSections}

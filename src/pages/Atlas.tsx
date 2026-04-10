@@ -11,14 +11,14 @@ export default function Atlas() {
     <ProductOverview
       name="Land Use Atlas"
       tagline="Zoning and land-use intelligence, modernized."
-      accent="#1cbe94"
+      accent="#d97706"
       badgeLabel="Zoning & Municipal Intelligence"
       description="Research parcels, analyze zoning districts, compare permitted uses, and work through code-linked workflows — built for planners, municipalities, and land professionals."
       audience="Municipal building departments, planning boards, zoning professionals, and land-use consultants."
       goal="Turn zoning research and land-use review from a manual, scattered process into a structured, searchable, code-linked workflow — built by someone who does this work every day."
       solves="Replaces manual zoning lookups, paper-based review processes, and fragmented regulatory data with searchable, structured intelligence that connects directly to municipal code."
-      ctaLabel="Open Full Atlas Site"
-      ctaHref="https://atlas.abzalinnovation.com/"
+      ctaLabel="Open Atlas Site"
+      ctaHref="https://atlas.abzalinnovation.com"
       highlights={[
         {
           title: "Zoning Analysis",

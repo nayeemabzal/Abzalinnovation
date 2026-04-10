@@ -20,6 +20,13 @@ export type ContactMethod = {
   href: string;
 };
 
+export type SocialLink = {
+  label: string;
+  handle: string;
+  detail: string;
+  href: string;
+};
+
 export type FAQItem = {
   question: string;
   answer: string;
@@ -101,27 +108,36 @@ export const inquiryCategories: InquiryCategory[] = [
 export const contactMethods: ContactMethod[] = [
   {
     label: "General Inquiries",
-    value: "hello@abzalinnovation.com",
+    value: "abzalelectric@gmail.com",
     detail: "Questions about the company or products.",
-    href: "mailto:hello@abzalinnovation.com",
+    href: "mailto:abzalelectric@gmail.com?subject=General%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
     label: "Product Demos",
-    value: "demos@abzalinnovation.com",
+    value: "abzalelectric@gmail.com",
     detail: "Product walkthroughs and pilot discussions.",
-    href: "mailto:demos@abzalinnovation.com",
+    href: "mailto:abzalelectric@gmail.com?subject=Demo%20Request%20for%20Abzal%20Innovation",
   },
   {
     label: "Partnerships",
-    value: "partnerships@abzalinnovation.com",
+    value: "abzalelectric@gmail.com",
     detail: "Implementation and strategic conversations.",
-    href: "mailto:partnerships@abzalinnovation.com",
+    href: "mailto:abzalelectric@gmail.com?subject=Partnership%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
     label: "Support",
-    value: "support@abzalinnovation.com",
+    value: "abzalelectric@gmail.com",
     detail: "Help with existing accounts and services.",
-    href: "mailto:support@abzalinnovation.com",
+    href: "mailto:abzalelectric@gmail.com?subject=Support%20Request%20for%20Abzal%20Innovation",
+  },
+];
+
+export const socialLinks: SocialLink[] = [
+  {
+    label: "Facebook",
+    handle: "Abzal Innovation",
+    detail: "Follow product updates, launches, and company news.",
+    href: "https://www.facebook.com/share/1aj9xuCuDi/",
   },
 ];
 
@@ -149,7 +165,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What products are available?",
         answer:
-          "The current product lineup includes Abzal Volt (electrical contractor operations), Abzal Build (construction project management), and Land Use Atlas (zoning and municipal intelligence). Additional products are in development.",
+          "Abzal Volt and Land Use Atlas are live now. Abzal Build is in development, and additional products are planned as the ecosystem grows.",
       },
       {
         question: "Are the products separate apps or one platform?",
@@ -191,14 +207,14 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What should I do first if I'm new to Abzal Innovation?",
         answer:
-          "Start with the Products page to understand the ecosystem, then visit the product page that matches your work. If you're not sure, contact us and we'll help point you in the right direction.",
+          "Start with the Products page to understand the ecosystem, then explore Volt or Land Use Atlas if they match your work. If you're interested in Build or you're not sure where to start, contact us and we'll point you in the right direction.",
       },
     ],
   },
 ];
 
 export const legalReviewNotice =
-  "This is starter legal copy for a software company website and future products. Final legal review is strongly recommended before public launch.";
+  "These website terms describe the current Abzal Innovation site and may be updated as products, jurisdictions, and services evolve. Formal legal review is still recommended as the business expands.";
 
 export const privacySections: LegalSection[] = [
   {
@@ -220,7 +236,7 @@ export const privacySections: LegalSection[] = [
     title: "Cookies, Analytics, and Tracking",
     body: [
       "We may use cookies, similar technologies, analytics tools, and session identifiers to understand site traffic, improve performance, remember preferences, and measure marketing or referral effectiveness.",
-      "Before launch, the final cookie disclosures, consent language, and analytics configuration should be reviewed and tailored to the jurisdictions where the site is available.",
+      "Cookie disclosures, consent language, and analytics configuration may be updated over time to reflect the jurisdictions where the site is available and the services Abzal Innovation provides.",
     ],
   },
   {
@@ -273,7 +289,7 @@ export const termsSections: LegalSection[] = [
   {
     title: "Scope of the Website and Future Services",
     body: [
-      "These Terms apply to the public-facing Abzal Innovation website and may also serve as a starting framework for future software products, product trials, protected areas, and related digital services offered by Abzal Innovation.",
+      "These Terms apply to the public-facing Abzal Innovation website and related digital services made available by Abzal Innovation.",
       "Additional product-specific terms, service agreements, or order forms may apply when you access or purchase a specific product.",
     ],
   },
@@ -334,7 +350,7 @@ export const termsSections: LegalSection[] = [
   {
     title: "Governing Law and Contact",
     body: [
-      "The governing law, venue, dispute-resolution approach, and business entity details for these Terms should be confirmed during final legal review. Questions about these Terms may be directed through the Contact page.",
+      "Additional legal notices, jurisdiction-specific terms, or product-specific agreements may supplement these Terms where appropriate. Questions about these Terms may be directed through the Contact page.",
     ],
   },
 ];
