@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
+import abzalLogo from "../../assets/abzal-logo.jpg";
 import { productLinks, siteNavigation } from "../../data/siteContent";
 import { solutions } from "../../data/homepageContent";
 import { getPathname } from "../../router";
@@ -11,40 +12,26 @@ type BrandMarkProps = {
 };
 
 export function BrandMark({ compact = false, dark = false }: BrandMarkProps) {
-  const textTone = dark ? "text-white" : "text-navy";
-  const subTone = dark ? "text-slate-400" : "text-slate-400";
+  const subTone = dark ? "text-slate-400" : "text-slate-500";
 
   return (
-    <Link className="flex items-center gap-2.5" href="/">
-      <span
-        className={`relative flex items-center justify-center rounded-[10px] bg-gradient-to-br from-blue-600 to-blue-500 shadow-[0_2px_8px_rgba(37,99,235,0.25)] ${
-          compact ? "h-8 w-8" : "h-9 w-9"
-        }`}
-      >
-        <svg
-          aria-hidden="true"
-          className={compact ? "h-4 w-4" : "h-[18px] w-[18px]"}
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-        </svg>
-      </span>
+    <Link
+      aria-label="Abzal Innovation home"
+      className={`flex items-center ${compact ? "" : "gap-3"}`}
+      href="/"
+    >
       <span className="flex flex-col leading-none">
-        <span
-          className={`font-display font-extrabold tracking-[-0.03em] ${textTone} ${
-            compact ? "text-[0.95rem]" : "text-[1.05rem]"
-          }`}
-        >
-          Abzal <span className="font-semibold text-blue-600">Innovation</span>
-        </span>
-        <span className={`mt-1 text-[0.66rem] font-medium tracking-wide ${subTone}`}>
+        <img
+          alt="Abzal Innovation"
+          className={`w-auto object-contain ${compact ? "h-11" : "h-10 sm:h-11"}`}
+          draggable="false"
+          src={abzalLogo}
+        />
+        {!compact && (
+          <span className={`mt-0.5 pl-0.5 text-[0.64rem] font-medium tracking-wide ${subTone}`}>
           Software for the teams that build everything
         </span>
+        )}
       </span>
     </Link>
   );
