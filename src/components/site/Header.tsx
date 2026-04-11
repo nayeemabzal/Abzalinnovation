@@ -23,12 +23,12 @@ export function BrandMark({ compact = false, dark = false }: BrandMarkProps) {
       <span className="flex flex-col leading-none">
         <img
           alt="Abzal Innovation"
-          className={`w-auto object-contain ${compact ? "h-11" : "h-10 sm:h-11"}`}
+          className={`w-auto object-contain ${compact ? "h-11" : "h-9 sm:h-11"}`}
           draggable="false"
           src={abzalLogo}
         />
         {!compact && (
-          <span className={`mt-0.5 pl-0.5 text-[0.64rem] font-medium tracking-wide ${subTone}`}>
+          <span className={`mt-0.5 hidden pl-0.5 text-[0.64rem] font-medium tracking-wide sm:block ${subTone}`}>
           Software for the teams that build everything
         </span>
         )}

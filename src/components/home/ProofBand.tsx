@@ -3,21 +3,25 @@ const stats = [
     value: "2",
     label: "Live products",
     sub: "Volt and Atlas are available today",
+    valueClassName: "text-[40px] sm:text-[44px]",
   },
   {
     value: "Town of Glenville, NY",
     label: "Municipal launch",
     sub: "Atlas is live for a real municipality",
+    valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },
   {
     value: "Build waitlist",
     label: "Open now",
     sub: "Construction teams can request early access",
+    valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },
   {
     value: "Founder-led",
     label: "Field + municipal experience",
     sub: "Master Electrician and Town Building Inspector",
+    valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },
 ];
 
@@ -59,14 +63,14 @@ export default function ProofBand() {
       />
 
       <div className="relative mx-auto max-w-[1200px]">
-        <div className="mb-14 max-w-[680px]">
+        <div className="mb-10 max-w-[680px] sm:mb-14">
           <div className="mb-3 text-[13px] font-bold uppercase tracking-[0.08em] text-blue-400">
             Built on real experience
           </div>
-          <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-white">
+          <h2 className="text-[32px] font-extrabold leading-[1.12] tracking-[-0.025em] text-white sm:text-[36px]">
             Built by someone who knows the field and the permit counter.
           </h2>
-          <p className="mt-4 text-[17px] leading-[1.65] text-white/60">
+          <p className="mt-4 text-[16px] leading-[1.65] text-white/60 sm:text-[17px]">
             Abzal Innovation exists because the tools our industries rely on
             weren't good enough. Every product is held to the same standard
             the team would expect from finished work in the field or a final
@@ -75,10 +79,12 @@ export default function ProofBand() {
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div key={s.label} className="bg-navy p-6 lg:p-8">
-              <div className="text-[44px] font-black leading-none tracking-[-0.03em] text-white">
+              <div
+                className={`max-w-[12ch] break-words font-black tracking-[-0.03em] text-white ${s.valueClassName}`}
+              >
                 {s.value}
               </div>
               <div className="mt-3 text-[13px] font-bold uppercase tracking-wider text-blue-400">
