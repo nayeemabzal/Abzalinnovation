@@ -23,14 +23,16 @@ export function BrandMark({ compact = false, dark = false }: BrandMarkProps) {
       <span className="flex flex-col leading-none">
         <img
           alt="Abzal Innovation"
-          className={`w-auto object-contain ${compact ? "h-11" : "h-9 sm:h-11"}`}
+          className={`w-auto object-contain ${compact ? "h-11" : "h-12 sm:h-[3.65rem]"}`}
           draggable="false"
           src={abzalLogo}
         />
         {!compact && (
-          <span className={`mt-0.5 hidden pl-0.5 text-[0.64rem] font-medium tracking-wide sm:block ${subTone}`}>
-          Software for the teams that build everything
-        </span>
+          <span
+            className={`mt-0.5 hidden pl-0.5 text-[0.67rem] font-medium tracking-wide sm:block ${subTone}`}
+          >
+            Software for the teams that build everything
+          </span>
         )}
       </span>
     </Link>
@@ -129,7 +131,7 @@ export default function Header() {
         Skip to content
       </a>
 
-      <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-between gap-4 px-6 lg:px-8">
+      <div className="mx-auto flex min-h-[4.4rem] w-full max-w-[1200px] items-center justify-between gap-4 px-6 py-2.5 sm:min-h-[4.9rem] sm:py-3 lg:px-8">
         <BrandMark />
 
         <nav
