@@ -149,7 +149,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What is Abzal Innovation?",
         answer:
-          "Abzal Innovation is a software company building purpose-built tools for electrical contractors, construction teams, and municipal land-use professionals. Our products include Abzal Volt, Abzal Build, and Land Use Atlas.",
+          "Abzal Innovation is a software company building purpose-built tools for electrical contractors, construction teams, and municipal land-use professionals. The current lineup includes Abzal Volt, Abzal Build, and Land Use Atlas, with Volt and Atlas live now and the Build waitlist open.",
       },
       {
         question: "Who are these products for?",
@@ -165,7 +165,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What products are available?",
         answer:
-          "Abzal Volt and Land Use Atlas are live now. Abzal Build is in development, and additional products are planned as the ecosystem grows.",
+          "Abzal Volt and Land Use Atlas are live now. Abzal Build is in active development with the waitlist open, and additional products are planned as the ecosystem grows.",
       },
       {
         question: "Are the products separate apps or one platform?",
@@ -175,7 +175,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "How do I know which product is right for me?",
         answer:
-          "Start with the Products page to see the full lineup, or contact our team and we'll help identify the best fit based on your trade, role, and workflow needs.",
+          "If you run electrical work, start with Volt. If your work is municipal, zoning, parcel, or land-use related, start with Land Use Atlas. If you're a builder or general contractor, join the Build waitlist or contact us and we'll help point you in the right direction.",
       },
     ],
   },
@@ -191,7 +191,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "Can municipalities use Abzal Innovation products?",
         answer:
-          "Yes. Municipal and public-sector teams are a core audience, especially for Land Use Atlas. The platform is designed around how planning, zoning, and review teams actually work.",
+          "Yes. Municipal and public-sector teams are a core audience, especially for Land Use Atlas. The platform is designed around how planning, zoning, and review teams actually work, and Atlas is already live for the Town of Glenville.",
       },
     ],
   },
@@ -202,7 +202,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "How do I request a demo?",
         answer:
-          "Use the Contact page and select the demo request option. We'll follow up to schedule a walkthrough of the product that fits your needs.",
+          "Use the Contact page and select the demo request option. We'll follow up to schedule a walkthrough of the product that fits your needs, whether that's Volt, Atlas, or an early conversation about Build.",
       },
       {
         question: "What should I do first if I'm new to Abzal Innovation?",

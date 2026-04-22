@@ -13,12 +13,16 @@ export default function Volt() {
       tagline="The operating platform for electrical contractors."
       accent="#2d8cff"
       badgeLabel="Electrical Contractor Platform"
+      availabilityLabel="Live Now"
+      availabilityNote="Available today for electrical contractor operations."
       description="Manage estimates, projects, finances, inspections, documents, and your team — all from one platform designed for how electrical work actually runs."
       audience="Electrical contractors, shops, and service companies of all sizes."
       goal="Give electrical contractors a single platform to manage estimates, projects, finances, inspections, and crews — so they can run their entire business from one place instead of five disconnected tools."
       solves="Replaces the stack of spreadsheets, paper forms, and disconnected apps that most electrical contractors use to manage estimates, projects, finances, inspections, and crews."
       ctaLabel="Open Full Volt Site"
       ctaHref="https://volt.abzalinnovation.com/"
+      bottomCtaTitle="Ready to bring Volt into your operation?"
+      bottomCtaDescription="Visit the live Volt site or contact Abzal for a walkthrough tailored to how your electrical work actually runs."
       highlights={[
         {
           title: "Estimates & Proposals",

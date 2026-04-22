@@ -1,6 +1,7 @@
 import Footer from "../components/site/Footer";
 import Header from "../components/site/Header";
 import Link from "../components/site/Link";
+import { socialLinks } from "../data/siteContent";
 
 const companyGoals = [
   {
@@ -26,27 +27,36 @@ const productGoals = [
     accent: "#2563eb",
     bg: "bg-blue-50",
     text: "text-blue-600",
+    status: "Live Now",
+    note: "Available today for electrical contractor operations.",
     goal: "Give electrical contractors a single platform to manage estimates, projects, finances, inspections, and crews — so they can run their entire business from one place.",
     audience: "Electrical contractors, shops, and service companies",
-    href: "/volt",
+    href: "https://volt.abzalinnovation.com",
+    linkLabel: "Visit Volt",
   },
   {
     name: "Abzal Build",
     accent: "#059669",
     bg: "bg-emerald-50",
     text: "text-emerald-600",
+    status: "Waitlist Open",
+    note: "Early-interest conversations are open while Build continues development.",
     goal: "Give builders, renovators, and flippers a project-centered platform for budgets, scheduling, documents, and field coordination — purpose-built for how construction works.",
     audience: "General contractors, remodelers, renovators, and flippers",
-    href: "/build",
+    href: "/contact",
+    linkLabel: "Join Build waitlist",
   },
   {
     name: "Land Use Atlas",
     accent: "#d97706",
     bg: "bg-amber-50",
     text: "text-amber-600",
+    status: "Live Now",
+    note: "Live now for the Town of Glenville, NY.",
     goal: "Turn zoning research and land-use review from a scattered, manual process into a structured, searchable, code-linked workflow — built by someone who does this work every day.",
     audience: "Municipal building departments, planning boards, and land-use professionals",
-    href: "/atlas",
+    href: "https://atlas.abzalinnovation.com",
+    linkLabel: "Visit Atlas",
   },
 ];
 
@@ -109,6 +119,13 @@ const proofPoints = [
   },
 ];
 
+const founderCredentials = [
+  "Master Electrician",
+  "Town of Glenville Building Inspector",
+  "Software Engineer",
+  "Founder-led product development",
+];
+
 function SectionHeader({
   eyebrow,
   title,
@@ -142,7 +159,6 @@ export default function About() {
     <div className="overflow-hidden bg-white text-text-primary">
       <Header />
 
-      {/* Hero */}
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fafc_0%,#f0f6ff_30%,#ffffff_100%)] px-6 pb-20 pt-20 lg:px-8 lg:pb-24 lg:pt-24">
         <div
           className="pointer-events-none absolute left-1/2 top-[-250px] h-[700px] w-[700px] -translate-x-1/2 rounded-full"
@@ -152,7 +168,7 @@ export default function About() {
           }}
         />
         <div className="relative mx-auto max-w-[1200px]">
-          <div className="max-w-[740px]">
+          <div className="max-w-[800px]">
             <div className="fade-up mb-4 text-[12px] font-bold uppercase tracking-[0.1em] text-blue-600">
               About
             </div>
@@ -168,12 +184,38 @@ export default function About() {
               </span>{" "}
               for the teams that build everything else.
             </h1>
-            <p className="fade-up d2 mt-5 max-w-[620px] text-[17px] leading-[1.7] text-slate-600">
+            <p className="fade-up d2 mt-5 max-w-[660px] text-[17px] leading-[1.7] text-slate-600">
               Abzal Innovation builds purpose-built software for electrical
               contractors, construction teams, and municipal land-use
-              professionals. Here's who we are, why we exist, and what
-              we're building toward.
+              professionals. The company exists to replace generic tools with
+              products that actually fit the work.
             </p>
+            <div className="fade-up d3 mt-6 flex flex-wrap items-center gap-2">
+              <Link
+                className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
+                href="https://volt.abzalinnovation.com"
+              >
+                Live now: Volt
+              </Link>
+              <Link
+                className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
+                href="https://atlas.abzalinnovation.com"
+              >
+                Live now: Atlas
+              </Link>
+              <Link
+                className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-[12px] font-semibold text-emerald-700 transition-all hover:-translate-y-px hover:border-emerald-300"
+                href="/contact"
+              >
+                Waitlist open: Build
+              </Link>
+              <Link
+                className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-navy transition-all hover:-translate-y-px hover:border-slate-300"
+                href={socialLinks[0].href}
+              >
+                Follow on Facebook
+              </Link>
+            </div>
             <div className="fade-up d3 mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-navy px-6 py-3 text-[14px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-slate-800 hover:shadow-[0_6px_20px_rgba(15,23,42,0.2)]"
@@ -185,7 +227,7 @@ export default function About() {
                 className="inline-flex items-center justify-center rounded-[10px] border border-slate-200 bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:border-slate-400"
                 href="/contact"
               >
-                Contact Us
+                Contact Abzal
               </Link>
             </div>
           </div>
@@ -216,7 +258,6 @@ export default function About() {
       </section>
 
       <main id="main-content">
-        {/* Founder */}
         <section className="bg-white px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <div className="rounded-[20px] border border-slate-200 bg-gradient-to-br from-white via-[#fafbff] to-[#f5f9ff] p-10 lg:p-14">
@@ -226,14 +267,24 @@ export default function About() {
               <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
                 Built by someone who does the work.
               </h2>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {founderCredentials.map((credential) => (
+                  <span
+                    key={credential}
+                    className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-slate-600"
+                  >
+                    {credential}
+                  </span>
+                ))}
+              </div>
               <div className="mt-8 grid gap-8 text-[16px] leading-[1.75] text-slate-600 lg:grid-cols-2">
                 <div className="space-y-4">
                   <p>
-                    Abzal Innovation was founded by Nayeem Abzal — a Master
+                    Abzal Innovation was founded by Nayeem Abzal, a Master
                     Electrician, Building Inspector for the Town of Glenville,
-                    and software engineer. That combination of field
-                    expertise and technical ability is rare, and it's the
-                    reason these products exist.
+                    and software engineer. That combination of field expertise
+                    and technical ability is rare, and it's the reason these
+                    products exist.
                   </p>
                   <p>
                     Nayeem has spent years running electrical jobs, managing
@@ -246,16 +297,15 @@ export default function About() {
                 <div className="space-y-4">
                   <p>
                     Every product in the Abzal ecosystem is shaped by direct
-                    experience — not by abstract market research or
-                    feature-list benchmarking. When Volt handles inspections,
-                    it reflects how inspections actually work. When Atlas
-                    links to municipal code, it's because the founder reads
-                    that code for a living.
+                    experience, not by abstract market research or feature-list
+                    benchmarking. When Volt handles inspections, it reflects how
+                    inspections actually work. When Atlas links to municipal
+                    code, it's because the founder reads that code for a living.
                   </p>
                   <p className="font-semibold text-navy">
-                    The goal isn't to build another generic SaaS platform.
-                    It's to build software that's as serious, capable, and
-                    premium as the professionals who use it.
+                    The goal isn't to build another generic SaaS platform. It's
+                    to build software that's as serious, capable, and premium as
+                    the professionals who use it.
                   </p>
                 </div>
               </div>
@@ -263,12 +313,12 @@ export default function About() {
           </div>
         </section>
 
-        {/* Company goals */}
         <section className="bg-slate-50 px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <SectionHeader
               eyebrow="Company Goals"
               title="What Abzal Innovation is working toward."
+              description="The company is focused on a small number of high-conviction problems instead of trying to be another generic software vendor."
             />
             <div className="grid gap-5 md:grid-cols-3">
               {companyGoals.map((goal) => (
@@ -288,12 +338,12 @@ export default function About() {
           </div>
         </section>
 
-        {/* Product goals */}
         <section className="bg-white px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <SectionHeader
-              eyebrow="Product Goals"
+              eyebrow="Current Products"
               title="What each product is designed to accomplish."
+              description="The Abzal portfolio is intentionally focused. Each product has a specific audience, a specific job to do, and a clear current status."
             />
             <div className="space-y-5">
               {productGoals.map((p) => (
@@ -320,10 +370,18 @@ export default function About() {
                         className={`inline-flex items-center gap-1.5 text-[13px] font-semibold transition-all hover:gap-2.5 ${p.text}`}
                         href={p.href}
                       >
-                        Learn more <span aria-hidden="true">→</span>
+                        {p.linkLabel} <span aria-hidden="true">→</span>
                       </Link>
                     </div>
-                    <div className="mt-0.5 text-[13px] font-semibold text-slate-500">
+                    <div className="mt-2 flex flex-wrap items-center gap-3">
+                      <span className={`inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-[0.06em] ${p.bg} ${p.text}`}>
+                        {p.status}
+                      </span>
+                      <span className="text-[12px] font-semibold text-slate-500">
+                        {p.note}
+                      </span>
+                    </div>
+                    <div className="mt-3 text-[13px] font-semibold text-slate-500">
                       {p.audience}
                     </div>
                     <p className="mt-3 text-[15px] leading-[1.65] text-slate-600">
@@ -336,12 +394,12 @@ export default function About() {
           </div>
         </section>
 
-        {/* Why */}
         <section className="bg-slate-50 px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <SectionHeader
               eyebrow="Why We Built It"
               title="The problems we're here to solve."
+              description="Abzal exists because too many serious teams are still forced to run serious work through tools that were never built for them."
               eyebrowColor="text-slate-400"
             />
             <div className="grid gap-5 md:grid-cols-3">
@@ -362,7 +420,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Mission & vision */}
         <section className="relative overflow-hidden bg-navy px-6 py-20 text-white lg:px-8">
           <div
             className="pointer-events-none absolute -right-[200px] -top-[200px] h-[500px] w-[500px] rounded-full"
@@ -398,7 +455,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* CTA */}
         <section
           className="relative overflow-hidden px-6 py-20 lg:px-8"
           style={{
@@ -413,26 +469,40 @@ export default function About() {
                 "radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)",
             }}
           />
-          <div className="relative mx-auto max-w-[620px] text-center text-white">
+          <div className="relative mx-auto max-w-[680px] text-center text-white">
             <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em]">
-              Explore the ecosystem or start a conversation.
+              Explore the products or start a conversation.
             </h2>
             <p className="mx-auto mt-4 text-[17px] leading-[1.65] text-slate-400">
-              See the products, request a walkthrough, or reach out to learn
-              how Abzal Innovation fits your team.
+              Visit one of the live products, join the Build waitlist, or reach
+              out if you want help deciding where Abzal fits your workflow.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:-translate-y-px hover:bg-slate-50"
-                href="/products"
+                href="https://volt.abzalinnovation.com"
               >
-                View Products
+                Visit Volt
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
+                href="https://atlas.abzalinnovation.com"
+              >
+                Visit Atlas
+              </Link>
+              <Link
+                className="inline-flex items-center justify-center rounded-[10px] bg-blue-600 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-blue-700"
                 href="/contact"
               >
-                Contact Us
+                Contact Abzal
+              </Link>
+            </div>
+            <div className="mt-5">
+              <Link
+                className="text-[13px] font-semibold text-slate-300 transition-colors hover:text-white"
+                href={socialLinks[0].href}
+              >
+                Follow Abzal on Facebook for product updates
               </Link>
             </div>
           </div>

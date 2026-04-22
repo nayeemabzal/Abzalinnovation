@@ -13,12 +13,16 @@ export default function Atlas() {
       tagline="Zoning and land-use intelligence, modernized."
       accent="#d97706"
       badgeLabel="Zoning & Municipal Intelligence"
+      availabilityLabel="Live Now"
+      availabilityNote="Live now for the Town of Glenville, NY."
       description="Research parcels, analyze zoning districts, compare permitted uses, and work through code-linked workflows — built for planners, municipalities, and land professionals."
       audience="Municipal building departments, planning boards, zoning professionals, and land-use consultants."
       goal="Turn zoning research and land-use review from a manual, scattered process into a structured, searchable, code-linked workflow — built by someone who does this work every day."
       solves="Replaces manual zoning lookups, paper-based review processes, and fragmented regulatory data with searchable, structured intelligence that connects directly to municipal code."
       ctaLabel="Open Atlas Site"
       ctaHref="https://atlas.abzalinnovation.com"
+      bottomCtaTitle="Ready to explore Land Use Atlas?"
+      bottomCtaDescription="Visit the live Atlas site or contact Abzal if you want to talk through a municipal or land-use workflow."
       highlights={[
         {
           title: "Zoning Analysis",

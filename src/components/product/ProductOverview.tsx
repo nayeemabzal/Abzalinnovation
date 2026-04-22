@@ -21,6 +21,14 @@ type ProductOverviewProps = {
   ctaLabel: string;
   ctaHref: string;
   badgeLabel: string;
+  availabilityLabel: string;
+  availabilityNote: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
+  tertiaryCtaLabel?: string;
+  tertiaryCtaHref?: string;
+  bottomCtaTitle?: string;
+  bottomCtaDescription?: string;
 };
 
 export default function ProductOverview({
@@ -35,6 +43,14 @@ export default function ProductOverview({
   ctaLabel,
   ctaHref,
   badgeLabel,
+  availabilityLabel,
+  availabilityNote,
+  secondaryCtaLabel = "Request a Demo",
+  secondaryCtaHref = "/contact",
+  tertiaryCtaLabel = "View All Products",
+  tertiaryCtaHref = "/products",
+  bottomCtaTitle,
+  bottomCtaDescription,
 }: ProductOverviewProps) {
   return (
     <SiteFrame
@@ -42,7 +58,7 @@ export default function ProductOverview({
         <GradientHero
           actions={[
             { label: ctaLabel, href: ctaHref },
-            { label: "Request a Demo", href: "/contact", variant: "secondary" },
+            { label: secondaryCtaLabel, href: secondaryCtaHref, variant: "secondary" },
           ]}
           description={
             <>
@@ -68,9 +84,22 @@ export default function ProductOverview({
           }
           kickerClassName="mb-5 inline-flex text-[12px] font-bold uppercase tracking-[0.08em]"
           meta={
-            <>
-              <span className="font-semibold text-navy">Built for:</span> {audience}
-            </>
+            <div className="flex flex-wrap items-center gap-3">
+              <span>
+                <span className="font-semibold text-navy">Built for:</span> {audience}
+              </span>
+              <span
+                className="inline-flex items-center rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.06em]"
+                style={{
+                  borderColor: `${accent}30`,
+                  backgroundColor: `${accent}10`,
+                  color: accent,
+                }}
+              >
+                {availabilityLabel}
+              </span>
+              <span className="text-slate-500">{availabilityNote}</span>
+            </div>
           }
           title={name}
           descriptionClassName="mt-3 max-w-[600px]"
@@ -80,7 +109,6 @@ export default function ProductOverview({
       }
     >
       <div>
-        {/* Goal & Problem */}
         <section className="bg-white px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <div className="grid gap-5 md:grid-cols-2">
@@ -113,7 +141,6 @@ export default function ProductOverview({
           </div>
         </section>
 
-        {/* Key highlights */}
         <section className="bg-slate-50 px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-12 max-w-[640px]">
@@ -152,7 +179,6 @@ export default function ProductOverview({
           </div>
         </section>
 
-        {/* CTA band */}
         <section
           className="relative overflow-hidden px-6 py-20 lg:px-8"
           style={{
@@ -166,26 +192,32 @@ export default function ProductOverview({
               background: `radial-gradient(circle, ${accent}28 0%, transparent 70%)`,
             }}
           />
-          <div className="relative mx-auto max-w-[620px] text-center text-white">
+          <div className="relative mx-auto max-w-[680px] text-center text-white">
             <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em]">
-              Interested in {name}?
+              {bottomCtaTitle ?? `Interested in ${name}?`}
             </h2>
             <p className="mx-auto mt-4 text-[17px] leading-[1.65] text-slate-400">
-              Schedule a walkthrough with our team to see how {name} fits your
-              operation, or explore the rest of the Abzal Innovation ecosystem.
+              {bottomCtaDescription ??
+                `Take the next step with ${name}, or explore the rest of the Abzal Innovation ecosystem.`}
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:-translate-y-px hover:bg-slate-50"
-                href="/contact"
+                href={ctaHref}
               >
-                Request a Demo
+                {ctaLabel}
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
-                href="/products"
+                href={secondaryCtaHref}
               >
-                View All Products
+                {secondaryCtaLabel}
+              </Link>
+              <Link
+                className="inline-flex items-center justify-center px-4 py-3 text-[14px] font-semibold text-slate-300 transition-colors hover:text-white"
+                href={tertiaryCtaHref}
+              >
+                {tertiaryCtaLabel}
               </Link>
             </div>
           </div>
