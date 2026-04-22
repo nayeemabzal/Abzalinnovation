@@ -108,27 +108,27 @@ export const inquiryCategories: InquiryCategory[] = [
 export const contactMethods: ContactMethod[] = [
   {
     label: "General Inquiries",
-    value: "abzalelectric@gmail.com",
+    value: "hello@abzalinnovation.com",
     detail: "Questions about the company or products.",
-    href: "mailto:abzalelectric@gmail.com?subject=General%20Inquiry%20for%20Abzal%20Innovation",
+    href: "mailto:hello@abzalinnovation.com?subject=General%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
     label: "Product Demos",
-    value: "abzalelectric@gmail.com",
+    value: "sales@abzalinnovation.com",
     detail: "Product walkthroughs and pilot discussions.",
-    href: "mailto:abzalelectric@gmail.com?subject=Demo%20Request%20for%20Abzal%20Innovation",
+    href: "mailto:sales@abzalinnovation.com?subject=Demo%20Request%20for%20Abzal%20Innovation",
   },
   {
     label: "Partnerships",
-    value: "abzalelectric@gmail.com",
+    value: "hello@abzalinnovation.com",
     detail: "Implementation and strategic conversations.",
-    href: "mailto:abzalelectric@gmail.com?subject=Partnership%20Inquiry%20for%20Abzal%20Innovation",
+    href: "mailto:hello@abzalinnovation.com?subject=Partnership%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
     label: "Support",
-    value: "abzalelectric@gmail.com",
+    value: "support@abzalinnovation.com",
     detail: "Help with existing accounts and services.",
-    href: "mailto:abzalelectric@gmail.com?subject=Support%20Request%20for%20Abzal%20Innovation",
+    href: "mailto:support@abzalinnovation.com?subject=Support%20Request%20for%20Abzal%20Innovation",
   },
 ];
 

@@ -8,7 +8,7 @@ const launchLinks = [
   { label: "Build Waitlist", href: "/contact", tone: "waitlist" },
   {
     label: "Get Updates",
-    href: "mailto:abzalelectric@gmail.com?subject=Abzal%20Innovation%20Updates",
+    href: "mailto:hello@abzalinnovation.com?subject=Abzal%20Innovation%20Updates",
     tone: "updates",
   },
   {

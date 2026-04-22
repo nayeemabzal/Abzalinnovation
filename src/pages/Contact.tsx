@@ -12,7 +12,7 @@ function validateEmail(email: string) {
 
 const inputBase =
   "w-full rounded-[10px] border bg-white px-4 py-3 text-[14px] text-navy outline-none transition-colors placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10";
-const contactFormEndpoint = "https://formsubmit.co/ajax/abzalelectric@gmail.com";
+const contactFormEndpoint = "https://formsubmit.co/ajax/contact@abzalinnovation.com";
 const contactFormSubject = "New Abzal Innovation website inquiry";
 
 export default function Contact() {
