@@ -1,0 +1,136 @@
+<svg width="1280" height="880" viewBox="0 0 1280 880" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Abzal Flip Tracker dashboard preview</title>
+  <desc id="desc">A polished dashboard preview showing house flip portfolio metrics, project progress, expenses, and acquisition workflow.</desc>
+  <rect width="1280" height="880" rx="44" fill="#0F172A"/>
+  <path d="M0 0H1280V880H0V0Z" fill="url(#bg)"/>
+  <g opacity="0.18">
+    <path d="M0 110H1280M0 220H1280M0 330H1280M0 440H1280M0 550H1280M0 660H1280M0 770H1280" stroke="white"/>
+    <path d="M160 0V880M320 0V880M480 0V880M640 0V880M800 0V880M960 0V880M1120 0V880" stroke="white"/>
+  </g>
+
+  <rect x="56" y="54" width="1168" height="772" rx="32" fill="#F8FAFC"/>
+  <rect x="56" y="54" width="1168" height="772" rx="32" stroke="#DDE6F1" stroke-width="2"/>
+
+  <g transform="translate(84 82)">
+    <rect width="220" height="716" rx="24" fill="#0F172A"/>
+    <g transform="translate(28 28)">
+      <rect width="48" height="48" rx="12" fill="#ECFEFF"/>
+      <path d="M13 29L24 18L35 29V38H13V29Z" fill="#0F172A"/>
+      <path d="M17 31L24 24L31 29L38 19" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 29L24 19L34 29" stroke="#34D399" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="64" y="20" fill="#F8FAFC" font-family="Space Grotesk, Arial, sans-serif" font-size="18" font-weight="800">Flip Tracker</text>
+      <text x="64" y="42" fill="#94A3B8" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="700">Local beta</text>
+    </g>
+    <g transform="translate(22 118)" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="800">
+      <rect width="176" height="44" rx="12" fill="#164E63"/>
+      <text x="18" y="28" fill="white">Dashboard</text>
+      <text x="18" y="82" fill="#94A3B8">Projects</text>
+      <text x="18" y="128" fill="#94A3B8">Expenses</text>
+      <text x="18" y="174" fill="#94A3B8">Budget</text>
+      <text x="18" y="220" fill="#94A3B8">Calendar</text>
+      <text x="18" y="266" fill="#94A3B8">Documents</text>
+      <text x="18" y="312" fill="#94A3B8">Portfolio</text>
+    </g>
+    <g transform="translate(28 622)">
+      <rect width="164" height="54" rx="14" fill="#1E293B"/>
+      <text x="16" y="22" fill="#A7F3D0" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="900" letter-spacing="1.2">READY</text>
+      <text x="16" y="40" fill="#CBD5E1" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="700">Supabase migration</text>
+    </g>
+  </g>
+
+  <g transform="translate(344 94)">
+    <text x="0" y="22" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="900" letter-spacing="1.8">PORTFOLIO DASHBOARD</text>
+    <text x="0" y="62" fill="#0F172A" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="800">Your flip portfolio at a glance</text>
+    <rect x="728" y="0" width="152" height="42" rx="21" fill="#ECFEFF" stroke="#A5F3FC"/>
+    <text x="755" y="26" fill="#0E7490" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="900">LOCAL MODE</text>
+  </g>
+
+  <g transform="translate(344 190)">
+    <g>
+      <rect width="190" height="112" rx="18" fill="white" stroke="#E2E8F0"/>
+      <text x="20" y="34" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">Active projects</text>
+      <text x="20" y="76" fill="#0F172A" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="800">4</text>
+    </g>
+    <g transform="translate(212 0)">
+      <rect width="190" height="112" rx="18" fill="white" stroke="#E2E8F0"/>
+      <text x="20" y="34" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">Cash tied up</text>
+      <text x="20" y="76" fill="#0F172A" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="800">$286k</text>
+    </g>
+    <g transform="translate(424 0)">
+      <rect width="190" height="112" rx="18" fill="white" stroke="#E2E8F0"/>
+      <text x="20" y="34" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">Portfolio ROI</text>
+      <text x="20" y="76" fill="#047857" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="800">18.4%</text>
+    </g>
+    <g transform="translate(636 0)">
+      <rect width="190" height="112" rx="18" fill="white" stroke="#E2E8F0"/>
+      <text x="20" y="34" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">Missing receipts</text>
+      <text x="20" y="76" fill="#B45309" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="800">3</text>
+    </g>
+  </g>
+
+  <g transform="translate(344 334)">
+    <rect width="526" height="252" rx="22" fill="white" stroke="#E2E8F0"/>
+    <text x="24" y="40" fill="#0F172A" font-family="Space Grotesk, Arial, sans-serif" font-size="24" font-weight="800">Oak Street Flip</text>
+    <rect x="374" y="22" width="126" height="32" rx="16" fill="#FEF3C7"/>
+    <text x="401" y="43" fill="#B45309" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="900">IN REHAB</text>
+    <g transform="translate(24 78)">
+      <text x="0" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800">Cost basis</text>
+      <text x="454" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="end">72%</text>
+      <rect y="14" width="454" height="10" rx="5" fill="#E2E8F0"/>
+      <rect y="14" width="327" height="10" rx="5" fill="#2563EB"/>
+    </g>
+    <g transform="translate(24 130)">
+      <text x="0" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800">Rehab budget</text>
+      <text x="454" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="end">58%</text>
+      <rect y="14" width="454" height="10" rx="5" fill="#E2E8F0"/>
+      <rect y="14" width="263" height="10" rx="5" fill="#06B6D4"/>
+    </g>
+    <g transform="translate(24 182)">
+      <text x="0" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800">Target sale</text>
+      <text x="454" y="0" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800" text-anchor="end">84%</text>
+      <rect y="14" width="454" height="10" rx="5" fill="#E2E8F0"/>
+      <rect y="14" width="381" height="10" rx="5" fill="#10B981"/>
+    </g>
+  </g>
+
+  <g transform="translate(904 334)">
+    <rect width="286" height="252" rx="22" fill="white" stroke="#E2E8F0"/>
+    <text x="22" y="38" fill="#0F172A" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="800">Acquisition</text>
+    <g transform="translate(22 68)" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="800">
+      <rect width="242" height="38" rx="11" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="25" fill="#334155">Statement uploaded</text>
+      <circle cx="220" cy="19" r="8" fill="#34D399"/>
+      <rect y="52" width="242" height="38" rx="11" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="77" fill="#334155">9 purchaser lines</text>
+      <circle cx="220" cy="71" r="8" fill="#F59E0B"/>
+      <rect y="104" width="242" height="38" rx="11" fill="#F8FAFC" stroke="#E2E8F0"/>
+      <text x="14" y="129" fill="#334155">Cost basis approved</text>
+      <circle cx="220" cy="123" r="8" fill="#06B6D4"/>
+    </g>
+    <rect x="22" y="212" width="242" height="16" rx="8" fill="#E0F2FE"/>
+    <rect x="22" y="212" width="188" height="16" rx="8" fill="#06B6D4"/>
+  </g>
+
+  <g transform="translate(344 624)">
+    <rect width="846" height="152" rx="22" fill="#0F172A"/>
+    <text x="28" y="38" fill="#A5F3FC" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="900" letter-spacing="1.5">NEXT ACTIONS</text>
+    <g transform="translate(28 62)" font-family="Manrope, Arial, sans-serif" font-size="15" font-weight="800">
+      <rect width="242" height="56" rx="14" fill="#1E293B"/>
+      <text x="18" y="35" fill="#E2E8F0">Upload closing statement</text>
+      <rect x="270" width="190" height="56" rx="14" fill="#1E293B"/>
+      <text x="288" y="35" fill="#E2E8F0">Add receipt</text>
+      <rect x="488" width="240" height="56" rx="14" fill="#1E293B"/>
+      <text x="506" y="35" fill="#E2E8F0">Schedule inspection</text>
+      <circle cx="796" cy="28" r="22" fill="#22D3EE"/>
+      <path d="M787 28H805M796 19V37" stroke="#0F172A" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="880" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#123653"/>
+      <stop offset="1" stop-color="#155E75"/>
+    </linearGradient>
+  </defs>
+</svg>

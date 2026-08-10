@@ -61,7 +61,7 @@ const products: Product[] = [
     description:
       "The operating platform for electrical contractors. Estimating, project tracking, inspections, crew hours, billing, and closeout in one workspace.",
     status: "Available Now",
-    price: "Starting at $79/mo",
+    price: "Live for contractor operations",
     linkLabel: "Visit Volt",
     linkHref: "https://volt.abzalinnovation.com",
     icon: (
@@ -73,11 +73,11 @@ const products: Product[] = [
   {
     id: "build",
     name: "Abzal Build",
-    tagline: "General Construction Management",
+    tagline: "Construction Management in Development",
     description:
-      "Project management for general contractors. Scope tracking, subcontractor coordination, RFIs, submittals, and financial oversight.",
+      "Upcoming project management for builders, renovators, and flippers. Build is being shaped around visibility, budgets, schedules, and field coordination.",
     status: "Waitlist Open",
-    price: "Request early access",
+    price: "Early conversations open",
     linkLabel: "Join Waitlist",
     linkHref: "/contact",
     icon: (

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "abzal-innovation-website",
+  "name": "Abzal Innovation Website",
+  "category": "Company Platform",
+  "mainFolderPath": "C:\\Users\\gtbad\\Apps\\Abzal Innovation Website",
+  "relatedFolders": [
+    "C:\\Users\\gtbad\\Apps\\Abzal Innovation Website backup",
+    "C:\\Users\\gtbad\\Apps\\Abzal_Studios"
+  ],
+  "relatedFiles": [],
+  "tags": [
+    "website",
+    "brand",
+    "company"
+  ],
+  "codexInstructions": "Check brand library and current site structure before changing copy or navigation.",
+  "lastUpdated": "2026-06-23",
+  "viewOnlyNotice": "Abzal Innovation Hub reads this metadata. Runtime Hub V1 should not modify project folders."
+}

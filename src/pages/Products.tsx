@@ -70,13 +70,13 @@ const products: Product[] = [
   {
     id: "build",
     name: "Abzal Build",
-    tagline: "General Construction Management",
+    tagline: "Construction Management in Development",
     description:
-      "Project management for general contractors. Scope tracking, subcontractor coordination, RFIs, submittals, and financial oversight.",
-    goal: "Give builders and renovators full project-centered visibility across budgets, schedules, and field coordination.",
+      "Upcoming project management for builders, renovators, and flippers. Build is being shaped around project visibility, budgets, scheduling, and field coordination.",
+    goal: "Shape a project-centered operating layer for builders before the product opens more broadly.",
     audience: "General contractors, remodelers, renovators, and flippers",
     solves:
-      "Replaces scattered project tracking, manual budget management, and disconnected field communication with a single platform built for how construction actually works.",
+      "Targets the scattered project tracking, manual budget management, and disconnected field communication common across construction teams.",
     overviewHref: "/build",
     overviewLabel: "See Build overview",
     actionHref: "/contact",
@@ -134,6 +134,41 @@ const products: Product[] = [
       note: "border-amber-100 bg-amber-50 text-amber-700",
     },
   },
+  {
+    id: "one-better",
+    name: "One Better",
+    tagline: "Calm Daily Personal-Improvement App",
+    description:
+      "A local-first mobile app that creates five small, personalized missions for the day and turns completed actions into a calm illustrated Better Path.",
+    goal: "Make personal progress feel specific, useful, and achievable without streak pressure or an overwhelming routine.",
+    audience: "Adults who want practical daily structure for focus, energy, home, digital life, and personal growth",
+    solves:
+      "Offers a focused alternative to rigid habit trackers, endless self-improvement lists, and progress systems that punish missed days.",
+    overviewHref: "/one-better/support",
+    overviewLabel: "Open app support",
+    actionHref: "/one-better",
+    actionLabel: "View One Better",
+    availabilityNote: "Version 1.0.0 is being prepared for Google Play testing.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 21V9" />
+        <path d="M12 13c-4 0-7-2.5-7-6 4 0 7 2.5 7 6z" />
+        <path d="M12 10c4 0 7-2.5 7-6-4 0-7 2.5-7 6z" />
+      </svg>
+    ),
+    theme: {
+      accent: "text-emerald-700",
+      border: "border-emerald-200",
+      iconBg: "bg-emerald-50",
+      iconColor: "text-emerald-700",
+      status: "bg-emerald-50 text-emerald-700",
+      statusLabel: "Play Release Prep",
+      button:
+        "bg-emerald-700 text-white hover:-translate-y-px hover:bg-emerald-800 hover:shadow-[0_8px_24px_rgba(4,120,87,0.18)]",
+      link: "text-emerald-700",
+      note: "border-emerald-100 bg-emerald-50 text-emerald-800",
+    },
+  },
 ];
 
 export default function Products() {
@@ -147,7 +182,7 @@ export default function Products() {
           ]}
           actionsClassName="items-center justify-center"
           contentClassName="mx-auto max-w-[860px] text-center"
-          description="Choose the Abzal product that matches your workflow. Volt and Land Use Atlas are live now, and Build is open for early-interest conversations."
+          description="Choose the Abzal product that matches your work or your day. Volt and Land Use Atlas are live now, Build is open for early-interest conversations, and One Better is preparing for Google Play testing."
           kicker="Products"
           meta={
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -168,6 +203,12 @@ export default function Products() {
                 href="/contact"
               >
                 Waitlist open: Build
+              </Link>
+              <Link
+                className="inline-flex items-center rounded-full border border-emerald-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-emerald-800 transition-all hover:-translate-y-px hover:border-emerald-300"
+                href="/one-better"
+              >
+                Play release prep: One Better
               </Link>
             </div>
           }

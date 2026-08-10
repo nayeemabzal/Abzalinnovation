@@ -8,7 +8,8 @@ type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 /** SPA-aware anchor. Internal links use pushState; external links open normally. */
 export default function Link({ href, children, onClick, ...rest }: LinkProps) {
-  const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+  const isHttpExternal = href.startsWith("http");
+  const isExternal = isHttpExternal || href.startsWith("mailto:");
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     onClick?.(e);
@@ -19,7 +20,7 @@ export default function Link({ href, children, onClick, ...rest }: LinkProps) {
     <a
       href={href}
       onClick={handleClick}
-      {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      {...(isHttpExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       {...rest}
     >
       {children}

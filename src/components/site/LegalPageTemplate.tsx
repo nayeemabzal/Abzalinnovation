@@ -1,4 +1,5 @@
 import type { LegalSection } from "../../data/siteContent";
+import type { HeroAction } from "./GradientHero";
 import Link from "./Link";
 import PageShell from "./PageShell";
 
@@ -8,6 +9,10 @@ type LegalPageTemplateProps = {
   description: string;
   effectiveDate: string;
   sections: LegalSection[];
+  actions?: HeroAction[];
+  contactDescription?: string;
+  contactHref?: string;
+  contactLabel?: string;
 };
 
 export default function LegalPageTemplate({
@@ -16,13 +21,17 @@ export default function LegalPageTemplate({
   description,
   effectiveDate,
   sections,
+  actions = [
+    { label: "Contact Us", href: "/contact" },
+    { label: "View Products", href: "/products", variant: "secondary" },
+  ],
+  contactDescription = "For questions about this policy, contact the Abzal Innovation team.",
+  contactHref = "/contact",
+  contactLabel = "Contact Us",
 }: LegalPageTemplateProps) {
   return (
     <PageShell
-      actions={[
-        { label: "Contact Us", href: "/contact" },
-        { label: "View Products", href: "/products", variant: "secondary" },
-      ]}
+      actions={actions}
       description={description}
       eyebrow={eyebrow}
       title={title}
@@ -65,14 +74,13 @@ export default function LegalPageTemplate({
                   Questions?
                 </div>
                 <p className="mt-3 text-[14px] leading-[1.6] text-slate-600">
-                  For questions about this policy, contact the Abzal Innovation
-                  team.
+                  {contactDescription}
                 </p>
                 <Link
                   className="mt-4 inline-flex items-center justify-center rounded-[10px] bg-navy px-5 py-2.5 text-[13px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-slate-800 hover:shadow-[0_6px_20px_rgba(15,23,42,0.2)]"
-                  href="/contact"
+                  href={contactHref}
                 >
-                  Contact Us
+                  {contactLabel}
                 </Link>
               </div>
             </div>

@@ -65,12 +65,12 @@ export const solutions: Solution[] = [
   {
     id: "build",
     name: "Abzal Build",
-    tagline: "Construction project management",
+    tagline: "Construction management in development",
     description:
-      "Project tracking, budgets, scheduling, and field coordination for builders, renovators, and flippers who need tighter control over every job.",
+      "An upcoming product being shaped around project visibility, budget clarity, scheduling, and field coordination for builders, renovators, and flippers.",
     accent: "#059669",
     href: "/build",
-    ctaLabel: "Learn more",
+    ctaLabel: "Join waitlist",
     icon: "hardhat",
   },
   {
@@ -310,11 +310,11 @@ export const atlasWhyPoints = [
 // --- Build page content ---
 
 export const buildHeroContent = {
-  title: "Project management built for builders",
+  title: "Project management in development for builders",
   description:
-    "Track projects, manage budgets, coordinate teams, and maintain full visibility across every job — designed for builders, renovators, and flippers.",
+    "Abzal Build is an upcoming product being shaped around project visibility, budget clarity, scheduling, and field coordination for builders, renovators, and flippers.",
   primaryCta: {
-    label: "Request a Demo",
+    label: "Join Build Waitlist",
     href: "/contact",
   },
   secondaryCta: {
@@ -326,54 +326,54 @@ export const buildHeroContent = {
 export const buildFeatures: VoltFeature[] = [
   {
     id: "projects",
-    title: "Project Tracking",
-    description: "Manage every project with milestones, phase tracking, and real-time status updates across your portfolio.",
+    title: "Project Visibility",
+    description: "Planned around helping teams understand project phase, status, and next steps across active work.",
     icon: "clipboard",
   },
   {
     id: "budgets",
-    title: "Budget Management",
-    description: "Set budgets, track actuals, monitor overruns, and keep every dollar accountable at the project level.",
+    title: "Budget Clarity",
+    description: "Being shaped around clearer budget context so builders can spot pressure earlier in the job.",
     icon: "dollar",
   },
   {
     id: "scheduling",
-    title: "Scheduling & Timelines",
-    description: "Plan work sequences, manage dependencies, and keep trades and milestones aligned across the build.",
+    title: "Scheduling Direction",
+    description: "Planned to support tighter coordination around timelines, dependencies, and field sequencing.",
     icon: "calendar",
   },
   {
     id: "field",
     title: "Field Coordination",
-    description: "Connect field teams to project plans with updates, assignments, and daily progress tracking.",
+    description: "Exploring cleaner ways to keep field teams aligned with the current project plan and priorities.",
     icon: "users",
   },
   {
     id: "documents",
     title: "Plans & Documents",
-    description: "Centralize blueprints, permits, contracts, and change orders — organized by project, always current.",
+    description: "Planned around keeping project materials easier to find, reference, and connect to the job.",
     icon: "folder",
   },
   {
     id: "visibility",
     title: "Operational Visibility",
-    description: "See the state of every job, every budget, and every team at a glance — no digging through spreadsheets.",
+    description: "The intended direction is a clearer view of work, money, and coordination across each project.",
     icon: "chart",
   },
 ];
 
 export const buildWhyPoints = [
   {
-    title: "Built for construction, not adapted",
-    description: "Purpose-built for the way builders, renovators, and flippers actually manage projects — not repurposed from another industry.",
+    title: "Shaped for construction workflows",
+    description: "Build is being developed around the way builders, renovators, and flippers actually manage projects.",
   },
   {
-    title: "Project-centered workflow",
-    description: "Everything revolves around the project: budgets, schedules, documents, and team coordination in one place.",
+    title: "Project-centered direction",
+    description: "The product direction centers on budgets, schedules, documents, and team coordination around each project.",
   },
   {
-    title: "From start to finish",
-    description: "Manage the entire lifecycle — from initial planning through daily execution to final close-out and handoff.",
+    title: "Early conversations open",
+    description: "The waitlist is open for construction teams that want to stay close while Build continues development.",
   },
 ];
 
@@ -472,64 +472,22 @@ export const pricingProducts: PricingProduct[] = [
   {
     id: "build",
     name: "Abzal Build",
-    tagline: "Construction project management",
+    tagline: "Construction management in development",
     accent: "#059669",
     tiers: [
       {
-        id: "build-starter",
-        name: "Starter",
-        description: "For independent builders and small renovation crews.",
-        monthlyPrice: 49,
-        annualPrice: 39,
-        ctaLabel: "Start Free Trial",
-        ctaHref: "/contact",
-        features: [
-          "Up to 3 users",
-          "Project tracking",
-          "Basic budgeting",
-          "Document management",
-          "Client portal",
-          "Mobile access",
-        ],
-      },
-      {
-        id: "build-professional",
-        name: "Professional",
-        description: "For builders managing multiple active projects.",
-        monthlyPrice: 129,
-        annualPrice: 99,
-        highlighted: true,
-        badge: "Most popular",
-        ctaLabel: "Start Free Trial",
-        ctaHref: "/contact",
-        features: [
-          "Up to 15 users",
-          "Everything in Starter",
-          "Advanced budgeting & cost tracking",
-          "Scheduling & timelines",
-          "Subcontractor coordination",
-          "Change order management",
-          "Storage (25 GB)",
-          "Priority support",
-        ],
-      },
-      {
-        id: "build-enterprise",
-        name: "Enterprise",
-        description: "For general contractors running high-volume operations.",
+        id: "build-waitlist",
+        name: "Waitlist",
+        description: "For builders and construction teams that want to stay close while Build is in development.",
         monthlyPrice: null,
         annualPrice: null,
-        ctaLabel: "Contact Sales",
+        ctaLabel: "Join Build Waitlist",
         ctaHref: "/contact",
         features: [
-          "Unlimited users",
-          "Everything in Professional",
-          "Multi-project dashboards",
-          "Advanced reporting",
-          "Role-based permissions",
-          "API access",
-          "Dedicated account manager",
-          "Custom onboarding",
+          "Early-interest conversation",
+          "Workflow fit discussion",
+          "Product direction updates",
+          "Waitlist placement",
         ],
       },
     ],
@@ -587,11 +545,11 @@ export const pricingProducts: PricingProduct[] = [
 export const pricingFaqs = [
   {
     question: "Can I try before I commit?",
-    answer: "Yes. Every product includes a 14-day free trial with full access to all features in your selected plan. No credit card required to start.",
+    answer: "Demo and trial availability can vary by product. Contact the Abzal team to confirm the right next step for Volt, Atlas, or the Build waitlist.",
   },
   {
     question: "What happens when my trial ends?",
-    answer: "You'll be prompted to choose a plan. Your data is preserved for 30 days after the trial ends, so there's no rush.",
+    answer: "If a trial applies to your product, the Abzal team will explain the next steps before you begin so there are no surprises.",
   },
   {
     question: "Can I switch plans later?",
@@ -599,7 +557,7 @@ export const pricingFaqs = [
   },
   {
     question: "Is there a discount for annual billing?",
-    answer: "Yes. Annual plans save roughly 20% compared to monthly billing across all products.",
+    answer: "Annual billing options may be available for live products. Contact sales to confirm current pricing and billing terms.",
   },
   {
     question: "Do you offer discounts for municipalities or government agencies?",

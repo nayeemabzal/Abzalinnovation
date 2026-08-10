@@ -14,7 +14,7 @@ const stats = [
   {
     value: "Build waitlist",
     label: "Open now",
-    sub: "Construction teams can request early access",
+    sub: "Construction teams can request an early conversation",
     valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },
   {

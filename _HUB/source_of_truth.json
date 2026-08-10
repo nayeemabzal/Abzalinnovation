@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "state": "Current",
+  "currentSourceOfTruth": "Current website app and brand library",
+  "officialSource": "Abzal Innovation brand direction and local site repo",
+  "pathOrLink": "C:\\Users\\gtbad\\Apps\\Abzal Innovation Website",
+  "dateVerified": "2026-06-23",
+  "notes": "Public-facing company platform.",
+  "files": [
+    "_HUB/project.json",
+    "_HUB/source_of_truth.json"
+  ]
+}

@@ -314,7 +314,7 @@ export default function Contact() {
                   </div>
                   <div className="rounded-[12px] border border-emerald-100 bg-emerald-50 p-4">
                     <div className="text-[11px] font-bold uppercase tracking-wider text-emerald-600">
-                      Opening Soon
+                      In Development
                     </div>
                     <p className="mt-1 text-[14px] font-semibold text-navy">
                       Abzal Build waitlist is open

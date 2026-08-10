@@ -17,9 +17,9 @@ const items: NextStep[] = [
   {
     name: "Join the Build waitlist",
     description:
-      "Abzal Build is opening soon for general contractors, remodelers, and teams that want a cleaner operating layer.",
+      "Abzal Build is in development for general contractors, remodelers, and teams that want a cleaner operating layer.",
     badge: "Waitlist Open",
-    ctaLabel: "Request early access",
+    ctaLabel: "Join waitlist",
     href: "/contact",
     iconBg: "bg-emerald-50",
     iconColor: "text-emerald-500",

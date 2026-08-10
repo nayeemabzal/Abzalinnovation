@@ -41,7 +41,7 @@ const productGoals = [
     text: "text-emerald-600",
     status: "Waitlist Open",
     note: "Early-interest conversations are open while Build continues development.",
-    goal: "Give builders, renovators, and flippers a project-centered platform for budgets, scheduling, documents, and field coordination — purpose-built for how construction works.",
+    goal: "Build is being shaped as a project-centered product direction for budgets, scheduling, documents, and field coordination — purpose-built for how construction works.",
     audience: "General contractors, remodelers, renovators, and flippers",
     href: "/contact",
     linkLabel: "Join Build waitlist",
@@ -110,7 +110,7 @@ const proofPoints = [
   {
     value: "Build waitlist",
     label: "Open now",
-    detail: "Construction teams can request early access today.",
+    detail: "Construction teams can request an early conversation today.",
   },
   {
     value: "Founder-led",

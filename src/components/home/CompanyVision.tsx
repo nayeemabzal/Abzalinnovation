@@ -1,8 +1,8 @@
 const stats = [
-  { value: "3", label: "Products in development", color: "text-blue-400" },
-  { value: "1", label: "Live product (Volt)", color: "text-emerald-400" },
-  { value: "100%", label: "Domain-expert founders", color: "text-amber-400" },
-  { value: "0", label: "Generic features", color: "text-violet-400" },
+  { value: "3", label: "Product lines", color: "text-blue-400" },
+  { value: "2", label: "Live products", color: "text-emerald-400" },
+  { value: "1", label: "Build waitlist", color: "text-amber-400" },
+  { value: "0", label: "Generic positioning", color: "text-violet-400" },
 ];
 
 export default function CompanyVision() {
@@ -39,9 +39,9 @@ export default function CompanyVision() {
             </p>
             <p className="mt-4 text-[16px] leading-[1.7] text-slate-400">
               Every product starts from real domain expertise — a Master
-              Electrician building electrical contractor software, a
-              construction professional shaping GC tools, a municipal
-              planner designing zoning systems.
+              Electrician building electrical contractor software, municipal
+              experience shaping zoning systems, and construction workflows
+              informing the direction of Build.
             </p>
           </div>
 

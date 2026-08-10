@@ -1,0 +1,19 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Abzal Flip Tracker app icon</title>
+  <desc id="desc">A dark rounded square app icon with a house and rising tracking line.</desc>
+  <rect width="512" height="512" rx="118" fill="#0F172A"/>
+  <rect x="24" y="24" width="464" height="464" rx="96" stroke="url(#border)" stroke-width="10"/>
+  <path d="M124 284L256 152L388 284V388C388 408.987 370.987 426 350 426H162C141.013 426 124 408.987 124 388V284Z" fill="#F8FAFC"/>
+  <path d="M124 284L256 152L388 284" stroke="#34D399" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M180 344L228 296L270 330L340 242" stroke="#06B6D4" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M284 242H350V308" stroke="#06B6D4" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="378" cy="128" r="34" fill="#F59E0B"/>
+  <path d="M369 128L377 136L392 119" stroke="#0F172A" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="border" x1="76" y1="58" x2="452" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.48" stop-color="#34D399"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="760" height="220" viewBox="0 0 760 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Abzal Flip Tracker logo</title>
+  <desc id="desc">A house-shaped mark with an upward tracking line beside the Abzal Flip Tracker wordmark.</desc>
+  <rect width="760" height="220" rx="34" fill="#F8FAFC"/>
+  <rect x="1" y="1" width="758" height="218" rx="33" stroke="#E2E8F0" stroke-width="2"/>
+  <g transform="translate(54 42)">
+    <rect x="0" y="0" width="136" height="136" rx="30" fill="#0F172A"/>
+    <path d="M32 78L68 42L104 78V108C104 114.627 98.627 120 92 120H44C37.373 120 32 114.627 32 108V78Z" fill="#F8FAFC"/>
+    <path d="M50 94L64 80L78 91L96 67" stroke="#06B6D4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M31 77L68 40L105 77" stroke="#34D399" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M78 67H98V87" stroke="#06B6D4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(224 54)">
+    <text x="0" y="34" fill="#64748B" font-family="Manrope, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="2.4">ABZAL</text>
+    <text x="0" y="87" fill="#0F172A" font-family="Space Grotesk, Manrope, Arial, sans-serif" font-size="54" font-weight="800">Flip Tracker</text>
+    <text x="2" y="124" fill="#475569" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="600">House-flip projects, costs, receipts, and ROI.</text>
+  </g>
+</svg>

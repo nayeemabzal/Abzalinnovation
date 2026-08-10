@@ -29,6 +29,10 @@ type ProductOverviewProps = {
   tertiaryCtaHref?: string;
   bottomCtaTitle?: string;
   bottomCtaDescription?: string;
+  goalEyebrow?: string;
+  solvesEyebrow?: string;
+  highlightsEyebrow?: string;
+  highlightsTitle?: string;
 };
 
 export default function ProductOverview({
@@ -51,6 +55,10 @@ export default function ProductOverview({
   tertiaryCtaHref = "/products",
   bottomCtaTitle,
   bottomCtaDescription,
+  goalEyebrow = "The Goal",
+  solvesEyebrow = "What It Replaces",
+  highlightsEyebrow = "Key Capabilities",
+  highlightsTitle,
 }: ProductOverviewProps) {
   return (
     <SiteFrame
@@ -123,7 +131,7 @@ export default function ProductOverview({
                   className="text-[13px] font-bold uppercase tracking-[0.08em]"
                   style={{ color: accent }}
                 >
-                  The Goal
+                  {goalEyebrow}
                 </div>
                 <p className="mt-4 text-[18px] font-semibold leading-[1.55] text-navy">
                   {goal}
@@ -131,7 +139,7 @@ export default function ProductOverview({
               </article>
               <article className="rounded-[20px] border border-slate-200 bg-white p-8">
                 <div className="text-[13px] font-bold uppercase tracking-[0.08em] text-slate-400">
-                  What It Replaces
+                  {solvesEyebrow}
                 </div>
                 <p className="mt-4 text-[16px] leading-[1.7] text-slate-600">
                   {solves}
@@ -148,10 +156,10 @@ export default function ProductOverview({
                 className="mb-3 text-[13px] font-bold uppercase tracking-[0.08em]"
                 style={{ color: accent }}
               >
-                Key Capabilities
+                {highlightsEyebrow}
               </div>
               <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
-                What {name} covers.
+                {highlightsTitle ?? `What ${name} covers.`}
               </h2>
             </div>
 

@@ -85,6 +85,18 @@ function ProductDropdown({ open }: { open: boolean }) {
         ))}
         <div className="mt-1 border-t border-slate-100 pt-1">
           <Link
+            className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-emerald-50/60"
+            href="/one-better"
+          >
+            <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-emerald-600 text-[15px] font-black text-white">
+              1+
+            </span>
+            <div>
+              <div className="text-[0.86rem] font-semibold text-navy">One Better</div>
+              <div className="text-[0.74rem] text-slate-500">Daily personal missions</div>
+            </div>
+          </Link>
+          <Link
             className="arrow-link flex items-center gap-2 rounded-xl px-3 py-2 text-[0.8rem] font-semibold text-slate-500 hover:text-navy"
             href="/products"
           >
@@ -98,7 +110,7 @@ function ProductDropdown({ open }: { open: boolean }) {
 
 function isActiveLink(href: string, pathname: string) {
   if (href === "/products") {
-    return ["/products", "/volt", "/build", "/atlas"].includes(pathname);
+    return ["/products", "/volt", "/build", "/atlas"].includes(pathname) || pathname.startsWith("/one-better");
   }
   return pathname === href;
 }

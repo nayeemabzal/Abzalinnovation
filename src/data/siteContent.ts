@@ -53,6 +53,7 @@ export const productLinks: SiteLink[] = [
   { label: "Abzal Volt", href: "/volt" },
   { label: "Abzal Build", href: "/build" },
   { label: "Land Use Atlas", href: "/atlas" },
+  { label: "One Better", href: "/one-better" },
 ];
 
 export const footerGroups: FooterGroup[] = [
@@ -62,13 +63,16 @@ export const footerGroups: FooterGroup[] = [
       { label: "Products Overview", href: "/products" },
       { label: "Abzal Volt", href: "/volt" },
       { label: "Abzal Build", href: "/build" },
+      { label: "Abzal Flip Tracker", href: "/flip-tracker" },
       { label: "Land Use Atlas", href: "/atlas" },
+      { label: "One Better", href: "/one-better" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Studio Kids", href: "/studio-kids" },
       { label: "FAQ", href: "/faq" },
       { label: "Contact", href: "/contact" },
     ],
@@ -89,7 +93,7 @@ export const inquiryCategories: InquiryCategory[] = [
   },
   {
     label: "Request a Demo",
-    description: "Schedule a walkthrough of any product in the ecosystem.",
+    description: "Schedule a walkthrough of a live product or start an early Build conversation.",
   },
   {
     label: "Municipal / Land Use Inquiry",
@@ -108,9 +112,9 @@ export const inquiryCategories: InquiryCategory[] = [
 export const contactMethods: ContactMethod[] = [
   {
     label: "General Inquiries",
-    value: "hello@abzalinnovation.com",
+    value: "contact@abzalinnovation.com",
     detail: "Questions about the company or products.",
-    href: "mailto:hello@abzalinnovation.com?subject=General%20Inquiry%20for%20Abzal%20Innovation",
+    href: "mailto:contact@abzalinnovation.com?subject=General%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
     label: "Product Demos",
@@ -120,15 +124,15 @@ export const contactMethods: ContactMethod[] = [
   },
   {
     label: "Partnerships",
-    value: "hello@abzalinnovation.com",
+    value: "contact@abzalinnovation.com",
     detail: "Implementation and strategic conversations.",
-    href: "mailto:hello@abzalinnovation.com?subject=Partnership%20Inquiry%20for%20Abzal%20Innovation",
+    href: "mailto:contact@abzalinnovation.com?subject=Partnership%20Inquiry%20for%20Abzal%20Innovation",
   },
   {
-    label: "Support",
-    value: "support@abzalinnovation.com",
-    detail: "Help with existing accounts and services.",
-    href: "mailto:support@abzalinnovation.com?subject=Support%20Request%20for%20Abzal%20Innovation",
+    label: "Existing Customers",
+    value: "contact@abzalinnovation.com",
+    detail: "Help routing an account, access, or service question.",
+    href: "mailto:contact@abzalinnovation.com?subject=Existing%20Customer%20Question%20for%20Abzal%20Innovation",
   },
 ];
 
