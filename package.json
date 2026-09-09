@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:earth": "node scripts/test-earth-integration.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",

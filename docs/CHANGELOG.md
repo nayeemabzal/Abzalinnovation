@@ -1,5 +1,16 @@
 # CHANGELOG — Abzal Innovation Website
 
+## 2026-09-09 — Earth Time Machine Vercel integration prepared
+
+- Replace the temporary iframe with prefix routing to the verified independent
+  Vercel app; preserve complete destination queries and fragments.
+- Studio Kids opens the standalone app with native document navigation. The
+  unparameterized entry retains the app's global timeline default.
+- Retain a direct-open fallback for development/older SPA pages. Preserve the
+  original handoff and marketing metadata/content.
+- Verify the production build and desktop/phone integration behavior locally;
+  deployment preview and device acceptance remain required before release.
+
 ## 2026-08-10 — One Better app microsite
 
 - Added a content-driven One Better landing page at `/one-better` with truthful

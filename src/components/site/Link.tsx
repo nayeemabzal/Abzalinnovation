@@ -6,14 +6,15 @@ type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
 };
 
-/** SPA-aware anchor. Internal links use pushState; external links open normally. */
+/** SPA-aware anchor. Standalone apps and external links navigate normally. */
 export default function Link({ href, children, onClick, ...rest }: LinkProps) {
   const isHttpExternal = href.startsWith("http");
   const isExternal = isHttpExternal || href.startsWith("mailto:");
+  const isStandaloneApp = /^\/earth-time-machine(?:[/?#]|$)/.test(href);
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     onClick?.(e);
-    if (!isExternal) navigate(href, e);
+    if (!e.defaultPrevented && !isExternal && !isStandaloneApp) navigate(href, e);
   }
 
   return (
