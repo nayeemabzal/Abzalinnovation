@@ -178,6 +178,12 @@ export default function StudioKids() {
               >
                 Watch Featured Story
               </Link>
+              <Link
+                className="inline-flex items-center justify-center rounded-[10px] border border-emerald-200/50 bg-emerald-950/70 px-6 py-3 text-[14px] font-bold text-white transition-all hover:bg-emerald-900"
+                href="/earth-time-machine"
+              >
+                Explore Earth Time Machine
+              </Link>
             </div>
             <div className="fade-up d4 mt-6 flex flex-wrap gap-2">
               <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[12px] font-semibold text-white/82 backdrop-blur-sm">

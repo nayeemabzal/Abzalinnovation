@@ -1,0 +1,57 @@
+.earth-page {
+  min-height: 100svh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: #050d18;
+  color: #edf7ff;
+  font-size: 1rem;
+}
+.earth-page a { color: inherit; }
+.earth-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: .9rem clamp(1rem, 3vw, 2.25rem);
+  border-bottom: 1px solid #234252;
+  background: #0a1928;
+}
+.earth-parent-link { font-size: .875rem; text-decoration: underline; text-underline-offset: .2em; }
+.earth-page h1 { margin: .15rem 0 0; font-size: clamp(1.25rem, 3vw, 1.7rem); line-height: 1.25; color: #fff; }
+.earth-open-link { padding: .65rem .8rem; border: 1px solid #527586; border-radius: .6rem; font-size: .875rem; font-weight: 650; }
+.earth-destinations {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .6rem clamp(1rem, 3vw, 2.25rem);
+}
+.earth-destinations > span { color: #b5cad7; font-size: .875rem; margin-right: .35rem; }
+.earth-destinations button {
+  min-height: 44px;
+  padding: .55rem .9rem;
+  border: 1px solid #355568;
+  border-radius: .6rem;
+  background: #0d2333;
+  color: #e6f4fa;
+  cursor: pointer;
+  font: inherit;
+  font-size: .875rem;
+  font-weight: 650;
+}
+.earth-destinations button[aria-pressed="true"] { background: #9aefd9; color: #073529; border-color: #9aefd9; }
+.earth-destinations button:hover { border-color: #a9f3e3; }
+.earth-page :focus-visible { outline: 3px solid #ffe28e; outline-offset: 3px; }
+.earth-explorer { flex: 1 1 auto; min-height: 480px; display: flex; }
+.earth-explorer iframe { display: block; width: 100%; height: 100%; min-height: 480px; flex: 1; border: 0; background: #050d18; }
+.earth-page-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; padding: .6rem 1rem; color: #b5cad7; font-size: .875rem; }
+.earth-page-footer a { text-decoration: underline; text-underline-offset: .2em; }
+.earth-skip { position: fixed; z-index: 100; top: .5rem; left: .5rem; transform: translateY(-200%); background: #113f4c; padding: .8rem; }
+.earth-skip:focus { transform: translateY(0); }
+@media (max-width: 540px) {
+  .earth-page-header { padding: .75rem 1rem; }
+  .earth-destinations { padding: .5rem 1rem; }
+  .earth-destinations > span { width: 100%; }
+}
