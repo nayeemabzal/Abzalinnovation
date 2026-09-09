@@ -17,8 +17,11 @@ with direct routing to the independently hosted app at
 https://earth-time-machine-tan.vercel.app/. The public app's 100 runtime files
 were verified against Git, and its globe/Guyana/landmark browser checks pass.
 
-The new website build and desktop/phone local integration checks pass. Actual
-Vercel preview routing and physical-device acceptance remain release gates.
+The new website build, local checks and actual Vercel preview routing tests pass.
+Owner enabled the specific preview exception; anonymous desktop/phone tests
+completed with zero page errors. All 100 prefixed runtime files return HTTP 200
+with correct content types. Physical-device acceptance and owner merge approval
+remain pending.
 PR #1 remains unmerged; the live website and old working app remain available.
 See [verification and continuation](EARTH_TIME_MACHINE_VERCEL_INTEGRATION_2026-09-09.md).
 
