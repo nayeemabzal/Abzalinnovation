@@ -1,0 +1,18 @@
+.earth-page {
+  min-height: 100svh;
+  background: #050d18;
+  color: #edf7ff;
+}
+.earth-page a { color: inherit; }
+.earth-page-header {
+  padding: 1rem clamp(1rem, 3vw, 2.25rem);
+  border-bottom: 1px solid #234252;
+  background: #0a1928;
+}
+.earth-parent-link { font-size: .875rem; text-decoration: underline; text-underline-offset: .2em; }
+.earth-page h1 { margin: .25rem 0 0; font-size: clamp(1.25rem, 3vw, 1.7rem); color: #fff; }
+.earth-fallback { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem; }
+.earth-fallback h2 { color: #fff; }
+.earth-fallback p { margin: 1rem 0 2rem; line-height: 1.7; }
+.earth-open-link { display: inline-block; padding: .8rem 1rem; border: 1px solid #527586; border-radius: .6rem; font-weight: 650; }
+.earth-page :focus-visible { outline: 3px solid #ffe28e; outline-offset: 3px; }

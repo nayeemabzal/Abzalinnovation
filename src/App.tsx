@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
 import FlipTracker from "./pages/FlipTracker";
 import Home from "./pages/Home";
+import EarthTimeMachine from "./pages/EarthTimeMachine";
 import NotFound from "./pages/NotFound";
 import OneBetter from "./pages/OneBetter";
 import OneBetterPrivacy from "./pages/OneBetterPrivacy";
@@ -44,6 +45,8 @@ function resolveRoute(pathname: string) {
     case "/flip-tracker":
     case "/flip":
       return <FlipTracker />;
+    case "/earth-time-machine":
+      return <EarthTimeMachine />;
     case "/studio-kids":
     case "/abzal-studio-kids":
       return <StudioKids />;
