@@ -69,6 +69,34 @@ Each discoverable item needs explicit time availability in its data, including a
 - Support reduced motion, pause and replay. Essential explanations must remain available when bloom, particles, audio or animation are reduced.
 - Test the complete tap sequence in portrait and landscape. A technically functional marker with a generic popup does not meet the intended experience.
 
+## Living lesson page below the globe — required
+The interactive holographic globe is the main attraction, the primary navigation and the first experience on every visit. It must occupy the dominant opening view and remain the place where children choose time, touch locations and begin discoveries. The page beneath it is a rich supporting lesson layer synchronized with the selected date, place and discovery. A child explores through the globe first, then scrolls naturally into deeper learning without losing that context.
+
+### Synchronized learning sections
+For each supported era, the page should provide:
+- **Snapshot:** what Earth looked like, the date range and the most important idea to remember.
+- **What changed:** the major geological, atmospheric, climate or biological process and its cause/effect relationship.
+- **Life at the time:** evidence-backed organisms, habitats and survival adaptations appropriate to that chapter.
+- **Places and landmarks:** only features or reconstructions valid for that time, linked back to globe locations where appropriate.
+- **Look closer:** interactive 3D scenes, cutaways, comparisons, profiles, animations, photography or diagrams.
+- **Evidence desk:** how scientists know, including fossils, rocks, measurements, maps, uncertainty and readable source credits.
+- **Try it:** one short mission, observation or question suitable for a child; reveal the explanation after an attempt.
+- **Words to know:** a small era-specific vocabulary list with optional narration.
+
+For a selected place, the same page changes into a location lesson. Guyana Today may include geography, rivers, rainforest, savanna, wildlife, people and landmarks, with Providence Stadium as an explorable cultural/sport destination. Selecting a stadium feature should bring its matching lesson into view; selecting a lesson card may focus the corresponding 3D object.
+
+### Page behavior
+- Keep the selected era and place when scrolling between the globe and lessons. Returning to the page must lead with the interactive globe rather than a marketing introduction or lesson index.
+- Do not reduce the globe to a decorative header, thumbnail or small map beside the lesson content. Give it the dominant opening viewport and direct access to the timeline and discovery controls.
+- Provide a visible “Return to globe” control and allow lesson cards to focus the globe or open a detailed scene.
+- Use visual cards, real imagery with credits, diagrams, narrated facts and interactive comparisons rather than long uninterrupted paragraphs.
+- Keep key facts readable without animation, audio or WebGL.
+- On tablets and phones, let the globe occupy the opening screen and let the lesson page flow below it with comfortable touch targets and no nested scrolling traps.
+- Load heavier lesson media when it approaches the viewport; do not make the globe wait for the entire lesson library.
+- Preserve sources, dates, units, evidence status and uncertainty. Avoid a generic collection of unrelated facts; every item must answer the selected era or place.
+
+The lesson page should feel like the deeper layer of the same holographic museum experience. It uses matching color, typography and visual language, but remains subordinate to the globe and continually leads children back to spatial exploration.
+
 ## Senku Intake / Local Authority
 This packet is incoming material, not the authority over the user's computer or project structure. Senku is the canonical local authority.
 
