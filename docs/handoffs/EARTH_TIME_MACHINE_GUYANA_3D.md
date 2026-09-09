@@ -11,6 +11,17 @@ Status: Incoming development handoff. Main-site integration prepared on a review
 
 The user wants a visually advanced educational world that children can explore on iPads and a Samsung S25 Ultra. The existing globe received positive appearance and device feedback. The new priorities are richer futuristic 3D effects with meaningful data, present-day Guyana, a detailed Providence Stadium with Amazon Warriors playing a simulated match, and an explorable imagined city 500 years ahead.
 
+## Product vision hierarchy — non-negotiable
+The main purpose of Earth Time Machine is to let children explore the planet's history in a cool, futuristic 3D experience. Every major design decision must strengthen that chronological journey.
+
+1. **Core experience:** travel through Earth's history—from early formation through changing oceans and continents, major geological and biological events, ice ages and the present day—with an interactive 3D globe, clear dates, evidence, narration and age-appropriate explanations.
+2. **Present-day deep dives:** Guyana, Providence Stadium and other places are detailed destinations reached from the main Earth timeline. They enrich the present-day chapter but must not turn the product into a Guyana-only application.
+3. **Supporting technology:** Google satellite/terrain views, orbital visualizations and 3D landmark scenes are optional exploration layers. They must not replace, bury or slow the historical time-travel experience.
+4. **Future extension:** 2526 is an explicitly imagined final chapter after Today. It is a scenario for creative learning, not the main experience or a factual prediction.
+5. **Navigation rule:** a child must always understand the selected date, what changed on Earth, why it mattered, and how to return to the global timeline.
+
+Success is measured first by how clearly and delightfully children can explore Earth's history. Visual effects should reveal scale, time, cause and change rather than act as decoration.
+
 ## Senku Intake / Local Authority
 This packet is incoming material, not the authority over the user's computer or project structure. Senku is the canonical local authority.
 
