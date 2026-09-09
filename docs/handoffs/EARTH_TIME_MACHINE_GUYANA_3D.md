@@ -22,6 +22,53 @@ The main purpose of Earth Time Machine is to let children explore the planet's h
 
 Success is measured first by how clearly and delightfully children can explore Earth's history. Visual effects should reveal scale, time, cause and change rather than act as decoration.
 
+## Holographic interaction language — non-negotiable
+The globe must not look or behave like a basic web map. Its visual target is a child-friendly futuristic holographic learning table: dimensional, responsive and exciting, while keeping labels and scientific explanations easy to read.
+
+### Interface across every era
+The holographic interface is the explorer's timeless viewing system and remains futuristic across the complete timeline. Early Earth, dinosaur periods, ice ages and Today should never fall back to a plain map or conventional popup design. The world data, discoveries, colors and environmental effects change with the selected time; the interaction quality and advanced spatial presentation remain consistent. Only the year 2526 changes the content into an imagined future scenario.
+
+### Resting globe
+- Present Earth as a luminous volumetric object in a dark observatory space, with controlled atmospheric rim light, subtle depth particles, faint geographic/grid arcs and time-reactive energy paths.
+- Let the selected era change the visual system: palette, atmosphere, surface activity and available discoveries should respond to what existed then.
+- Use motion to communicate planetary processes—rotation, plate movement between sourced snapshots, impacts, volcanism, ice extent, ocean change and orbit—not as random decorative noise.
+- Keep the interface clear enough for young children to immediately find the date, play/pause, discoveries and return controls. Do not bury learning under dense science-fiction dashboard clutter.
+
+### Touch-to-discover sequence
+A successful tap on the globe should feel like the hologram recognized a place:
+1. A surface pulse and scanning ring lock onto the selected coordinate.
+2. A short vertical light beam or arc connects the point to an anchored label.
+3. The label identifies the city, landmark, geological feature, event or habitat with its name, type and applicable date.
+4. A compact visual card opens with an image, miniature 3D object, terrain slice, animation or diagram when an evidence-backed asset exists.
+5. The child may open a deeper scene, hear the lesson, try a mission, compare eras or close the card and continue spinning the globe.
+
+Do not imply that every coordinate can be reverse-geocoded or identified. If a tapped point has no curated discovery nearby, show its coordinates and a useful era-appropriate observation rather than inventing a city, landform, species or country.
+
+### Three depths of learning
+- **Discover:** name, icon, era and one memorable fact in a quick anchored holographic label.
+- **Understand:** "What was here?", "What changed?" and "Why it matters," supported by a visual, narration and source/uncertainty access.
+- **Explore:** enter a focused 3D terrain, cutaway, reconstruction, wildlife habitat, city or landmark scene with interactive learning points and a clear route back to the same date and globe position.
+
+Every detailed scene must have an accessible list/button alternative to tapping small 3D targets.
+
+### Time-aware discovery rules
+Each discoverable item needs explicit time availability in its data, including a start, end or named chapter, evidence type and uncertainty. The renderer must filter discoveries from that data rather than maintaining unrelated hand-written visibility checks.
+
+- Modern cities, Providence Stadium, current borders and present-day structures appear only in appropriate recent chapters.
+- Dinosaurs, ancient organisms, glaciers, impact sites and volcanic events appear only in chapters supported by evidence.
+- A modern landmark must not remain pinned to an ancient reconstructed continent. An ancient precursor may appear only as a separately sourced reconstruction with an honest label.
+- When crossing a relevant date, discoveries may form, move, transform or fade with a short meaningful transition.
+- Provide a timeline explanation when something is absent: for example, "Providence Stadium had not been built yet," rather than leaving confusing disabled markers everywhere.
+- Keep measured facts, scientific reconstructions and imagined future content visually distinct. The year 2526 uses an unmistakable "Imagined future" status throughout.
+
+### Visual and performance acceptance
+- Use genuine 3D depth, occlusion, light and camera motion. Flat cards may provide readable text, but they should feel anchored to the spatial interaction.
+- Establish a restrained visual language: cyan/teal planetary light, gold for discoveries and Guyana accents where relevant. Color must also carry readable text/icons, not act as the only status signal.
+- Load detailed models, photography and local scenes only after selection. Keep the main globe and timeline ready first.
+- Use one active rendering loop, adaptive detail, capped pixel density, instancing and asset disposal so the experience remains responsive on the tested iPads and Samsung S25 Ultra.
+- Support reduced motion, pause and replay. Essential explanations must remain available when bloom, particles, audio or animation are reduced.
+- Test the complete tap sequence in portrait and landscape. A technically functional marker with a generic popup does not meet the intended experience.
+
 ## Senku Intake / Local Authority
 This packet is incoming material, not the authority over the user's computer or project structure. Senku is the canonical local authority.
 
