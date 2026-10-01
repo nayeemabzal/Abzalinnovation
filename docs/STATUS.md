@@ -10,6 +10,19 @@ source_of_truth: ../_HUB/status.json
 
 # Status
 
+## Current website release candidate — 2026-10-01
+
+The owner authorized recovery and publication. Canonical main is reconciled with
+merged PR #1 (`e807c88`); the stale August lock is removed, 90 protected hashes
+and the two local documentation additions were preserved. Marketing regression
+passes249 assertions/zero browser errors; integrated build/TypeScript passes.
+Earth proxy and publication checks are recorded in the
+[release checklist](audit/MAIN_SITE_RELEASE_2026-10-01/RELEASE.md).
+Conservative product-site/development wording avoids unverified commercial
+availability and Google Play readiness. The older checkpoints below are
+historical; neither PR #1 approval nor the recovered Git lock remains pending.
+
+
 ## Earth Time Machine migration review — 2026-09-09
 
 PR #1's temporary ChatGPT Sites iframe has been replaced on the integration branch
@@ -53,3 +66,8 @@ The earlier One Better status below is retained as its historical checkpoint.
 Deploy the current build, verify `/one-better/privacy` is publicly reachable
 without authentication, and use that URL in Play Console. Replace the launch
 status CTA with the official Google Play listing only after approval.
+
+
+## Local main-site review — 2026-10-01
+
+Session `abzal-website-main-review-2026-10-01`. [Current local review](audit/MAIN_SITE_REVIEW_2026-10-01/REVIEW.md). Build passes;231 browser assertions/zero errors. Local unpublished marketing batch; remote PR1 merged, canonical checkout fast-forward blocked by existing index.lock. Older deployment/audit statements above are historical. Product/route boundaries preserved.

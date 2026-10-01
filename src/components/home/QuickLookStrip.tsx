@@ -17,9 +17,9 @@ const livePreviews: LivePreview[] = [
   {
     name: "Abzal Volt",
     label: "Electrical operations",
-    badge: "Live Now",
+    badge: "Product Site",
     description:
-      "A quick look at the live Volt experience for electrical contractors managing estimates, jobs, and closeout in one place.",
+      "A preview of Volt for electrical contractors managing estimates, jobs, and closeout in one place.",
     href: "https://volt.abzalinnovation.com",
     imageSrc: "/product-previews/volt-home.jpg",
     imageAlt: "Preview of the Abzal Volt website and dashboard experience.",
@@ -28,9 +28,9 @@ const livePreviews: LivePreview[] = [
   {
     name: "Land Use Atlas",
     label: "Municipal intelligence",
-    badge: "Live Now",
+    badge: "Product Site",
     description:
-      "A quick look at the live Atlas workspace supporting parcel review, district workflows, and municipal land-use research.",
+      "A preview of the Atlas workspace supporting parcel review, district workflows, and municipal land-use research.",
     href: "https://atlas.abzalinnovation.com",
     imageSrc: "/product-previews/atlas-home.jpg",
     imageAlt: "Preview of the Land Use Atlas workspace and review tools.",
@@ -52,7 +52,7 @@ const toneClasses: Record<PreviewTone, { badge: string; link: string }> = {
 const buildSignals = [
   "Project-centered budgets and scheduling",
   "Cleaner field coordination for builders",
-  "Waitlist open while the workflow takes shape",
+  "Early conversations while the workflow takes shape",
 ];
 
 export default function QuickLookStrip() {
@@ -64,13 +64,12 @@ export default function QuickLookStrip() {
             Quick Look
           </div>
           <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
-            See the tools without turning this site into the demo.
+            Find the workspace for your work.
           </h2>
           <p className="mt-3 text-[17px] leading-[1.65] text-slate-600">
-            The company site stays high-level on purpose. These previews are
-            here to show that the products are real, polished, and already in
-            motion, while the deeper walkthroughs stay on each product&apos;s own
-            page.
+            Explore electrical operations with Volt or municipal research with
+            Land Use Atlas. Each product opens on its own site with its own
+            workspace and access.
           </p>
         </div>
 
@@ -84,7 +83,7 @@ export default function QuickLookStrip() {
                 className="group overflow-hidden rounded-[22px] border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(15,23,42,0.08)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden border-b border-slate-100 bg-slate-100">
-                  <img
+                  <img decoding="async"
                     alt={preview.imageAlt}
                     className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
                     loading="lazy"
@@ -128,15 +127,15 @@ export default function QuickLookStrip() {
             }}
           >
             <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-emerald-600">
-              Build Waitlist
+              Build in development
             </div>
             <h3 className="mt-2 text-[28px] font-extrabold leading-[1.1] tracking-[-0.03em] text-navy">
-              Keep the main site company-first.
+              Help shape a tool for builders.
             </h3>
             <p className="mt-4 text-[15px] leading-[1.7] text-slate-600">
-              Build is part of the story, but the deeper product walkthroughs
-              belong on the product pages. Here, we just give people enough
-              proof to trust what Abzal is building.
+              Abzal Build is being developed around project budgets, schedules,
+              and field coordination. Tell us how your team works and what
+              would make your next project easier to manage.
             </p>
 
             <div className="mt-6 overflow-hidden rounded-[18px] border border-emerald-100 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.05)]">
@@ -150,7 +149,7 @@ export default function QuickLookStrip() {
                   </div>
                 </div>
                 <span className="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.06em] text-emerald-700">
-                  Waitlist Open
+                  In Development
                 </span>
               </div>
               <div className="space-y-3 px-4 py-4">
@@ -201,7 +200,7 @@ export default function QuickLookStrip() {
                 className="inline-flex items-center justify-center rounded-[10px] bg-navy px-4 py-2.5 text-[13px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-slate-800"
                 href="/contact"
               >
-                Join Build waitlist
+                Ask about Build
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] border border-slate-200 bg-white px-4 py-2.5 text-[13px] font-semibold text-navy transition-all hover:border-slate-300"

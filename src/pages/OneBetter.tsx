@@ -289,17 +289,17 @@ export default function OneBetter() {
         <div className="mx-auto grid max-w-[1200px] gap-8 rounded-[24px] bg-[#173229] p-8 text-white sm:p-10 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:p-12">
           <div>
             <div className="text-[12px] font-bold uppercase tracking-[0.1em] text-[#a9d39f]">
-              Launch status
+              App availability
             </div>
             <h2 className="font-display mt-3 text-[34px] font-extrabold leading-[1.12] tracking-[-0.03em]">
-              Google Play release in preparation.
+              Ask about current Android availability.
             </h2>
             <p className="mt-4 max-w-[650px] text-[16px] leading-[1.7] text-white/66">
-              One Better 1.0.0 is being prepared for internal Play testing. This page will link directly to the official store listing after approval.
+              Explore the app overview, privacy information, and support resources here. Contact the team for current Android access options.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link className="inline-flex items-center justify-center rounded-[11px] bg-[#f9b543] px-6 py-3 text-[14px] font-bold text-[#173229] hover:-translate-y-px hover:bg-[#ffc761]" href={oneBetterHero.primaryCta.href}>
-                Get launch updates
+                Ask about availability
               </Link>
               <Link className="inline-flex items-center justify-center rounded-[11px] border border-white/18 bg-white/8 px-6 py-3 text-[14px] font-bold text-white hover:border-white/35 hover:bg-white/12" href="/one-better/support">
                 Contact support

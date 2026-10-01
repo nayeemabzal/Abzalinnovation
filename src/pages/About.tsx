@@ -1,5 +1,4 @@
-import Footer from "../components/site/Footer";
-import Header from "../components/site/Header";
+import SiteFrame from "../components/site/SiteFrame";
 import Link from "../components/site/Link";
 import { socialLinks } from "../data/siteContent";
 
@@ -27,8 +26,8 @@ const productGoals = [
     accent: "#2563eb",
     bg: "bg-blue-50",
     text: "text-blue-600",
-    status: "Live Now",
-    note: "Available today for electrical contractor operations.",
+    status: "Product Site",
+    note: "Visit the Volt site and ask about current access options.",
     goal: "Give electrical contractors a single platform to manage estimates, projects, finances, inspections, and crews — so they can run their entire business from one place.",
     audience: "Electrical contractors, shops, and service companies",
     href: "https://volt.abzalinnovation.com",
@@ -39,20 +38,20 @@ const productGoals = [
     accent: "#059669",
     bg: "bg-emerald-50",
     text: "text-emerald-600",
-    status: "Waitlist Open",
+    status: "In Development",
     note: "Early-interest conversations are open while Build continues development.",
     goal: "Build is being shaped as a project-centered product direction for budgets, scheduling, documents, and field coordination — purpose-built for how construction works.",
     audience: "General contractors, remodelers, renovators, and flippers",
     href: "/contact",
-    linkLabel: "Join Build waitlist",
+    linkLabel: "Ask about Build",
   },
   {
     name: "Land Use Atlas",
     accent: "#d97706",
     bg: "bg-amber-50",
     text: "text-amber-600",
-    status: "Live Now",
-    note: "Live now for the Town of Glenville, NY.",
+    status: "Product Site",
+    note: "Explore Glenville zoning research; coverage varies by jurisdiction.",
     goal: "Turn zoning research and land-use review from a scattered, manual process into a structured, searchable, code-linked workflow — built by someone who does this work every day.",
     audience: "Municipal building departments, planning boards, and land-use professionals",
     href: "https://atlas.abzalinnovation.com",
@@ -99,17 +98,17 @@ const missionVision = [
 const proofPoints = [
   {
     value: "2",
-    label: "Live products",
-    detail: "Volt and Land Use Atlas are available now.",
+    label: "Product sites",
+    detail: "Explore Volt and Land Use Atlas on their dedicated sites.",
   },
   {
     value: "Town of Glenville, NY",
-    label: "Municipal launch",
-    detail: "Atlas is live for the Town of Glenville.",
+    label: "Glenville workspace",
+    detail: "Explore the Glenville zoning research workspace.",
   },
   {
-    value: "Build waitlist",
-    label: "Open now",
+    value: "Abzal Build",
+    label: "In development",
     detail: "Construction teams can request an early conversation today.",
   },
   {
@@ -156,8 +155,7 @@ function SectionHeader({
 
 export default function About() {
   return (
-    <div className="overflow-hidden bg-white text-text-primary">
-      <Header />
+    <SiteFrame>
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#f8fafc_0%,#f0f6ff_30%,#ffffff_100%)] px-6 pb-20 pt-20 lg:px-8 lg:pb-24 lg:pt-24">
         <div
@@ -195,19 +193,19 @@ export default function About() {
                 className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
                 href="https://volt.abzalinnovation.com"
               >
-                Live now: Volt
+                Explore: Volt
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
                 href="https://atlas.abzalinnovation.com"
               >
-                Live now: Atlas
+                Explore: Atlas
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-[12px] font-semibold text-emerald-700 transition-all hover:-translate-y-px hover:border-emerald-300"
                 href="/contact"
               >
-                Waitlist open: Build
+                In development: Build
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-navy transition-all hover:-translate-y-px hover:border-slate-300"
@@ -257,7 +255,7 @@ export default function About() {
         </div>
       </section>
 
-      <main id="main-content">
+      <div>
         <section className="bg-white px-6 py-20 lg:px-8">
           <div className="mx-auto max-w-[1200px]">
             <div className="rounded-[20px] border border-slate-200 bg-gradient-to-br from-white via-[#fafbff] to-[#f5f9ff] p-10 lg:p-14">
@@ -474,7 +472,7 @@ export default function About() {
               Explore the products or start a conversation.
             </h2>
             <p className="mx-auto mt-4 text-[17px] leading-[1.65] text-slate-400">
-              Visit one of the live products, join the Build waitlist, or reach
+              Explore one of the product sites, ask about Build, or reach
               out if you want help deciding where Abzal fits your workflow.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -507,9 +505,8 @@ export default function About() {
             </div>
           </div>
         </section>
-      </main>
+      </div>
 
-      <Footer />
-    </div>
+    </SiteFrame>
   );
 }

@@ -1,7 +1,7 @@
 const stats = [
   { value: "3", label: "Product lines", color: "text-blue-400" },
-  { value: "2", label: "Live products", color: "text-emerald-400" },
-  { value: "1", label: "Build waitlist", color: "text-amber-400" },
+  { value: "2", label: "Product sites", color: "text-emerald-400" },
+  { value: "1", label: "Build in development", color: "text-amber-400" },
   { value: "0", label: "Generic positioning", color: "text-violet-400" },
 ];
 

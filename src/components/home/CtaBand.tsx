@@ -22,11 +22,11 @@ export default function CtaBand() {
 
       <div className="relative mx-auto max-w-[620px] text-center text-white">
         <h2 className="text-[32px] font-extrabold leading-[1.12] tracking-[-0.025em] sm:text-[36px]">
-          Start with a live product today.
+          Find the right product for your work.
         </h2>
         <p className="mx-auto mt-4 text-[16px] leading-[1.65] text-slate-400 sm:text-[17px]">
           Visit Volt for electrical operations, explore Atlas for municipal
-          intelligence, or join the Build waitlist if that's the direction
+          intelligence, or ask about Build if that's the direction
           you're planning toward.
         </p>
 
@@ -47,7 +47,7 @@ export default function CtaBand() {
             className="inline-flex w-full items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10 sm:w-auto"
             href="/contact"
           >
-            Join Build Waitlist
+            Ask about Build
           </Link>
         </div>
         <div className="mt-5">

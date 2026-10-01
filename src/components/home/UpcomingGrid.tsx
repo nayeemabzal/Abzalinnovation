@@ -15,11 +15,11 @@ type NextStep = {
 
 const items: NextStep[] = [
   {
-    name: "Join the Build waitlist",
+    name: "Ask about Build",
     description:
       "Abzal Build is in development for general contractors, remodelers, and teams that want a cleaner operating layer.",
-    badge: "Waitlist Open",
-    ctaLabel: "Join waitlist",
+    badge: "In Development",
+    ctaLabel: "Ask about Build",
     href: "/contact",
     iconBg: "bg-emerald-50",
     iconColor: "text-emerald-500",

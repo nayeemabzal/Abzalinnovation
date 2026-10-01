@@ -128,6 +128,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const escape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        if (productsOpen) document.querySelector<HTMLAnchorElement>('nav[aria-label="Main navigation"] a[href="/products"]')?.focus();
+        if (mobileOpen) document.querySelector<HTMLButtonElement>('[aria-controls="mobile-site-nav"]')?.focus();
+        setMobileOpen(false);
+        setProductsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [mobileOpen, productsOpen]);
+
   return (
     <header
       className={`sticky top-0 z-30 transition-[background-color,border-color,backdrop-filter] duration-300 ${
@@ -158,8 +171,10 @@ export default function Header() {
               <div
                 className="relative"
                 key={link.label}
+                onFocus={() => isProducts && setProductsOpen(true)}
+                onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setProductsOpen(false); }}
                 onMouseEnter={() => isProducts && setProductsOpen(true)}
-                onMouseLeave={() => isProducts && setProductsOpen(false)}
+                onMouseLeave={(event) => { if (isProducts && !event.currentTarget.contains(document.activeElement)) setProductsOpen(false); }}
               >
                 <Link
                   className={`inline-flex items-center gap-1 rounded-full px-4 py-[7px] text-[0.8rem] font-semibold transition-all ${
@@ -203,7 +218,7 @@ export default function Header() {
             aria-controls="mobile-site-nav"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-[10px] border border-slate-200 bg-white text-navy lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-[10px] border border-slate-200 bg-white text-navy lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             type="button"
           >

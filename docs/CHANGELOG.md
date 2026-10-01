@@ -1,5 +1,19 @@
 # CHANGELOG — Abzal Innovation Website
 
+## 2026-10-01 — Main website clarity and reliability
+
+- Reconcile canonical main with merged EarthTimeMachine integration, preserving
+  all local marketing work and documentation additions.
+- Clarify product-site access, Build development and One Better availability;
+  preserve separate app/hosting boundaries and branding.
+- Improve route metadata/main landmarks, keyboard menu Escape focus and anchor
+  history/Back/reduced-motion behavior.
+- Harden contact acceptance/error/timeout/cancel/draft behavior and trim emails.
+- Add marketing regression coverage; refresh Earth photo-close selectors and
+  explicit view-readiness waits without changing its app or proxy configuration.
+- See [release checklist/evidence](audit/MAIN_SITE_RELEASE_2026-10-01/RELEASE.md).
+
+
 ## 2026-09-09 — Earth Time Machine Vercel integration prepared
 
 - Replace the temporary iframe with prefix routing to the verified independent
@@ -59,3 +73,8 @@ Format: `## YYYY-MM-DD — Title` then bullets.
 ## 2026-03-25 — CTA polish
 - Point Atlas CTA to branded subdomain.
 - Fix shared CTA link colors.
+
+
+## Local main-site review — 2026-10-01
+
+Session `abzal-website-main-review-2026-10-01`. [Current local review](audit/MAIN_SITE_REVIEW_2026-10-01/REVIEW.md). Build passes;231 browser assertions/zero errors. Local unpublished marketing batch; remote PR1 merged, canonical checkout fast-forward blocked by existing index.lock. Older deployment/audit statements above are historical. Product/route boundaries preserved.

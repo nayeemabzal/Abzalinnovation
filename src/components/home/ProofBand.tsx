@@ -1,19 +1,19 @@
 const stats = [
   {
     value: "2",
-    label: "Live products",
-    sub: "Volt and Atlas are available today",
+    label: "Product sites",
+    sub: "Dedicated sites for two focused products",
     valueClassName: "text-[40px] sm:text-[44px]",
   },
   {
     value: "Town of Glenville, NY",
-    label: "Municipal launch",
-    sub: "Atlas is live for a real municipality",
+    label: "Glenville workspace",
+    sub: "Municipal zoning and parcel research",
     valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },
   {
-    value: "Build waitlist",
-    label: "Open now",
+    value: "Abzal Build",
+    label: "In development",
     sub: "Construction teams can request an early conversation",
     valueClassName: "text-[30px] leading-[0.95] sm:text-[36px]",
   },

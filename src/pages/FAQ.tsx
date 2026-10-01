@@ -4,21 +4,21 @@ import { faqGroups, socialLinks } from "../data/siteContent";
 
 const currentStatus = [
   {
-    label: "Live now",
+    label: "Explore the site",
     title: "Abzal Volt",
     detail: "Electrical contractor operations platform",
     href: "https://volt.abzalinnovation.com",
     tone: "blue",
   },
   {
-    label: "Live now",
+    label: "Explore the site",
     title: "Land Use Atlas",
-    detail: "Live for the Town of Glenville, NY",
+    detail: "Glenville zoning research",
     href: "https://atlas.abzalinnovation.com",
     tone: "amber",
   },
   {
-    label: "Waitlist open",
+    label: "In development",
     title: "Abzal Build",
     detail: "Early-interest conversations are open",
     href: "/contact",
@@ -45,9 +45,9 @@ export default function FAQ() {
     <PageShell
       actions={[
         { label: "Visit Volt", href: "https://volt.abzalinnovation.com" },
-        { label: "Join Build Waitlist", href: "/contact", variant: "secondary" },
+        { label: "Ask about Build", href: "/contact", variant: "secondary" },
       ]}
-      description="Quick answers about Abzal Innovation, what's live now, and how to get started with Volt, Atlas, or the Build waitlist."
+      description="Quick answers about Abzal Innovation, product access, and how to get started with Volt, Atlas, or plans for Build."
       eyebrow="FAQ"
       title="Answers about the products and how to get started."
     >
@@ -169,7 +169,7 @@ export default function FAQ() {
             Still have questions?
           </h2>
           <p className="mx-auto mt-4 text-[17px] leading-[1.65] text-slate-400">
-            Visit one of the live products, join the Build waitlist, or reach
+            Explore one of the product sites, ask about Build, or reach
             out if you want help figuring out the best starting point.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

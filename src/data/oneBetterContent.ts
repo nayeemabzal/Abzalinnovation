@@ -16,8 +16,8 @@ export const oneBetterHero = {
   description:
     "One Better turns your goals, interests, and available time into five small actions for the day. Complete one or finish the set—progress still counts.",
   primaryCta: {
-    label: "Get launch updates",
-    href: "mailto:hello@abzalinnovation.com?subject=One%20Better%20launch%20updates",
+    label: "Ask about availability",
+    href: "mailto:contact@abzalinnovation.com?subject=One%20Better%20availability",
   },
   secondaryCta: { label: "Read the privacy policy", href: "/one-better/privacy" },
 };

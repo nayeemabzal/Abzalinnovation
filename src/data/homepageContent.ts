@@ -70,7 +70,7 @@ export const solutions: Solution[] = [
       "An upcoming product being shaped around project visibility, budget clarity, scheduling, and field coordination for builders, renovators, and flippers.",
     accent: "#059669",
     href: "/build",
-    ctaLabel: "Join waitlist",
+    ctaLabel: "Ask about Build",
     icon: "hardhat",
   },
   {
@@ -119,9 +119,9 @@ export const whyPoints = [
       "Each product is designed for a specific operational context — not adapted from a one-size-fits-all platform.",
   },
   {
-    title: "Connected ecosystem",
+    title: "Focused, separate products",
     description:
-      "Shared architecture means your tools work together as your business grows, without switching platforms.",
+      "Each product has its own workspace and access. Choose the tool that fits your work and explore it on its dedicated site.",
   },
   {
     title: "Built for real workflows",
@@ -275,7 +275,7 @@ export const atlasFeatures: VoltFeature[] = [
   {
     id: "districts",
     title: "District Analysis",
-    description: "Explore district-level summaries, development patterns, and regulatory context for any jurisdiction.",
+    description: "Explore district-level summaries, development patterns, and regulatory context for supported jurisdictions.",
     icon: "grid",
   },
   {
@@ -314,7 +314,7 @@ export const buildHeroContent = {
   description:
     "Abzal Build is an upcoming product being shaped around project visibility, budget clarity, scheduling, and field coordination for builders, renovators, and flippers.",
   primaryCta: {
-    label: "Join Build Waitlist",
+    label: "Ask about Build",
     href: "/contact",
   },
   secondaryCta: {
@@ -373,7 +373,7 @@ export const buildWhyPoints = [
   },
   {
     title: "Early conversations open",
-    description: "The waitlist is open for construction teams that want to stay close while Build continues development.",
+    description: "Early conversations are open for construction teams that want to stay close while Build continues development.",
   },
 ];
 
@@ -481,7 +481,7 @@ export const pricingProducts: PricingProduct[] = [
         description: "For builders and construction teams that want to stay close while Build is in development.",
         monthlyPrice: null,
         annualPrice: null,
-        ctaLabel: "Join Build Waitlist",
+        ctaLabel: "Ask about Build",
         ctaHref: "/contact",
         features: [
           "Early-interest conversation",
@@ -545,7 +545,7 @@ export const pricingProducts: PricingProduct[] = [
 export const pricingFaqs = [
   {
     question: "Can I try before I commit?",
-    answer: "Demo and trial availability can vary by product. Contact the Abzal team to confirm the right next step for Volt, Atlas, or the Build waitlist.",
+    answer: "Demo and trial availability can vary by product. Contact the Abzal team to confirm the right next step for Volt, Atlas, or plans for Build.",
   },
   {
     question: "What happens when my trial ends?",

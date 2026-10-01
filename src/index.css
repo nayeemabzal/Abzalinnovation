@@ -389,3 +389,8 @@ select:focus {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-border), transparent);
 }
+
+/* Keyboard navigation and anchor destinations. */
+:where(a, button, summary):focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
+[id] { scroll-margin-top: 6rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }

@@ -93,7 +93,7 @@ export const inquiryCategories: InquiryCategory[] = [
   },
   {
     label: "Request a Demo",
-    description: "Schedule a walkthrough of a live product or start an early Build conversation.",
+    description: "Ask about a product walkthrough or start an early Build conversation.",
   },
   {
     label: "Municipal / Land Use Inquiry",
@@ -153,7 +153,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What is Abzal Innovation?",
         answer:
-          "Abzal Innovation is a software company building purpose-built tools for electrical contractors, construction teams, and municipal land-use professionals. The current lineup includes Abzal Volt, Abzal Build, and Land Use Atlas, with Volt and Atlas live now and the Build waitlist open.",
+          "Abzal Innovation is a software company building purpose-built tools for electrical contractors, construction teams, and municipal land-use professionals. The current lineup includes Abzal Volt, Abzal Build, and Land Use Atlas, with dedicated Volt and Atlas sites and Build in development.",
       },
       {
         question: "Who are these products for?",
@@ -169,17 +169,17 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "What products are available?",
         answer:
-          "Abzal Volt and Land Use Atlas are live now. Abzal Build is in active development with the waitlist open, and additional products are planned as the ecosystem grows.",
+          "Abzal Volt and Land Use Atlas have dedicated sites. Abzal Build is in active development with early conversations open, and additional products are planned as the ecosystem grows.",
       },
       {
         question: "Are the products separate apps or one platform?",
         answer:
-          "They are separate products built on shared architecture. Each product addresses a specific workflow while fitting into the broader Abzal Innovation ecosystem.",
+          "They are separate apps with their own workspaces and access. The company site helps you choose a product; it does not provide a shared account or promise data sync between products.",
       },
       {
         question: "How do I know which product is right for me?",
         answer:
-          "If you run electrical work, start with Volt. If your work is municipal, zoning, parcel, or land-use related, start with Land Use Atlas. If you're a builder or general contractor, join the Build waitlist or contact us and we'll help point you in the right direction.",
+          "If you run electrical work, start with Volt. If your work is municipal, zoning, parcel, or land-use related, start with Land Use Atlas. If you're a builder or general contractor, ask about Build or contact us and we'll help point you in the right direction.",
       },
     ],
   },
@@ -195,7 +195,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "Can municipalities use Abzal Innovation products?",
         answer:
-          "Yes. Municipal and public-sector teams are a core audience, especially for Land Use Atlas. The platform is designed around how planning, zoning, and review teams actually work, and Atlas is already live for the Town of Glenville.",
+          "Yes. Municipal and public-sector teams are a core audience, especially for Land Use Atlas. The platform is designed around how planning, zoning, and review teams actually work, and Atlas includes Glenville zoning research. Coverage and access should be checked on its dedicated site.",
       },
     ],
   },
@@ -358,3 +358,16 @@ export const termsSections: LegalSection[] = [
     ],
   },
 ];
+
+export const marketingMetadata = {
+  "/": ["Software for contractors and municipal teams", "Explore Volt for electrical operations and Land Use Atlas for municipal research. Learn about Abzal Build, currently in development."],
+  "/products": ["Products and availability", "Choose an Abzal product by workflow. Volt and Land Use Atlas have dedicated sites; Build is in development and explore One Better and ask about current availability."],
+  "/about": ["About the company", "Learn about Abzal Innovation and its focus on electrical, construction and municipal workflows."],
+  "/contact": ["Contact and product questions", "Contact Abzal Innovation for product questions, walkthroughs, municipal workflows or an early conversation about Build."],
+  "/faq": ["Product questions", "Answers about Abzal products, separate workspaces, availability and how to reach the team."],
+  "/volt": ["Volt for electrical contractors", "Explore Volt for estimates, projects, job costs, crew hours and electrical operations. Open the dedicated Volt site or ask for a walkthrough."],
+  "/atlas": ["Land Use Atlas", "Explore municipal zoning and parcel research with Land Use Atlas. Coverage varies by jurisdiction; research does not replace an official determination."],
+  "/build": ["Abzal Build in development", "Abzal Build is being shaped for builders and renovators. Discuss your workflow with the team; no launch date is announced."],
+  "/privacy-policy": ["Website privacy policy", "Read how Abzal Innovation handles website inquiries and information."],
+  "/terms-of-use": ["Website terms of use", "Read the terms for using the Abzal Innovation company website."],
+} as const;

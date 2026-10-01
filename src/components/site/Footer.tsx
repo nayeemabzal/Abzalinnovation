@@ -5,7 +5,7 @@ import Link from "./Link";
 const launchLinks = [
   { label: "Open Volt", href: "https://volt.abzalinnovation.com", tone: "live" },
   { label: "Visit Atlas", href: "https://atlas.abzalinnovation.com", tone: "live" },
-  { label: "Build Waitlist", href: "/contact", tone: "waitlist" },
+  { label: "Build in development", href: "/contact", tone: "waitlist" },
   {
     label: "Get Updates",
     href: "mailto:contact@abzalinnovation.com?subject=Abzal%20Innovation%20Updates",
@@ -28,7 +28,7 @@ export default function Footer() {
             Purpose-built software for contractors, construction teams, and municipal land-use professionals.
           </p>
           <p className="mt-4 text-[0.74rem] font-semibold uppercase tracking-[0.12em] text-slate-500">
-            Volt and Atlas are live now
+            Explore Volt and Land Use Atlas
           </p>
           <p className="mt-2 text-[0.8rem] leading-5 text-text-muted">
             Follow launches, demo availability, and product updates from the

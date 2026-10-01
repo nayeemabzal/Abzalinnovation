@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <GradientHero
       actions={[
-        { label: "Explore Live Products", href: "#products" },
-        { label: "Join Build Waitlist", href: "/contact", variant: "secondary" },
+        { label: "Explore Products", href: "#products" },
+        { label: "Talk to us", href: "/contact", variant: "secondary" },
       ]}
       contentClassName="mx-auto max-w-[760px] text-center"
       description="Abzal Innovation builds software for the people doing real operational work, from electrical contractors and builders to municipal land-use teams."
@@ -17,20 +17,20 @@ export default function Hero() {
       meta={
         <div className="flex flex-col items-center gap-3">
           <div className="text-[13px] font-semibold uppercase tracking-[0.08em] text-slate-500">
-            Volt and Land Use Atlas are live now. Build waitlist is open.
+            Explore Volt and Land Use Atlas. Build is in development.
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2">
             <Link
               className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
               href="https://volt.abzalinnovation.com"
             >
-              Live now: Volt
+              Explore: Volt
             </Link>
             <Link
               className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
               href="https://atlas.abzalinnovation.com"
             >
-              Live now: Atlas
+              Explore: Atlas
             </Link>
             <Link
               className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-navy transition-all hover:-translate-y-px hover:border-slate-300"

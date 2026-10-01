@@ -60,8 +60,8 @@ const products: Product[] = [
     tagline: "Electrical Contractor Platform",
     description:
       "The operating platform for electrical contractors. Estimating, project tracking, inspections, crew hours, billing, and closeout in one workspace.",
-    status: "Available Now",
-    price: "Live for contractor operations",
+    status: "Explore the Site",
+    price: "Electrical operations workspace",
     linkLabel: "Visit Volt",
     linkHref: "https://volt.abzalinnovation.com",
     icon: (
@@ -76,9 +76,9 @@ const products: Product[] = [
     tagline: "Construction Management in Development",
     description:
       "Upcoming project management for builders, renovators, and flippers. Build is being shaped around visibility, budgets, schedules, and field coordination.",
-    status: "Waitlist Open",
+    status: "In Development",
     price: "Early conversations open",
-    linkLabel: "Join Waitlist",
+    linkLabel: "Ask about Build",
     linkHref: "/contact",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -92,8 +92,8 @@ const products: Product[] = [
     tagline: "Municipal Zoning & Land Use Tool",
     description:
       "Interactive zoning visualization for municipalities. Parcel-level data, overlay districts, variance tracking, and public-facing maps.",
-    status: "Available Now",
-    price: "Live for the Town of Glenville, NY",
+    status: "Explore the Site",
+    price: "Glenville zoning research",
     linkLabel: "Visit Atlas",
     linkHref: "https://atlas.abzalinnovation.com",
     icon: (
@@ -107,19 +107,19 @@ const products: Product[] = [
 
 export default function ProductGrid() {
   return (
-    <section className="bg-white px-6 py-20 lg:px-8" id="products">
+    <section className="bg-white px-6 py-20 lg:px-8" id="products" tabIndex={-1}>
       <div className="mx-auto max-w-[1200px]">
         <div className="mb-12 max-w-[640px]">
           <div className="mb-3 text-[13px] font-bold uppercase tracking-[0.08em] text-blue-600">
             Our Products
           </div>
           <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
-            Start with what's live now.
+            Choose the tool for your work.
           </h2>
           <p className="mt-3 text-[17px] leading-[1.65] text-slate-600">
-            Volt and Land Use Atlas are available today, and Build is open for
-            early-interest conversations while the product continues to take
-            shape.
+            Explore Volt for electrical operations and Land Use Atlas for
+            Glenville zoning research. Build is in development; contact us
+            about your construction workflow.
           </p>
         </div>
 

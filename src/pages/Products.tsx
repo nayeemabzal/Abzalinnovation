@@ -48,7 +48,7 @@ const products: Product[] = [
     overviewLabel: "See Volt overview",
     actionHref: "https://volt.abzalinnovation.com",
     actionLabel: "Visit Volt",
-    availabilityNote: "Live now for electrical contractor operations.",
+    availabilityNote: "Visit the Volt site and ask about current access options.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -60,7 +60,7 @@ const products: Product[] = [
       iconBg: "bg-blue-50",
       iconColor: "text-blue-500",
       status: "bg-blue-50 text-blue-600",
-      statusLabel: "Available Now",
+      statusLabel: "Explore the Site",
       button:
         "bg-blue-600 text-white hover:-translate-y-px hover:bg-blue-700 hover:shadow-[0_8px_24px_rgba(37,99,235,0.18)]",
       link: "text-blue-600",
@@ -80,8 +80,8 @@ const products: Product[] = [
     overviewHref: "/build",
     overviewLabel: "See Build overview",
     actionHref: "/contact",
-    actionLabel: "Join Build waitlist",
-    availabilityNote: "Waitlist open now while Build continues development.",
+    actionLabel: "Ask about Build",
+    availabilityNote: "In development; contact us to discuss your workflow.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M2 20h20M5 20V8l7-5 7 5v12M9 20v-4h6v4" />
@@ -93,7 +93,7 @@ const products: Product[] = [
       iconBg: "bg-emerald-50",
       iconColor: "text-emerald-500",
       status: "bg-emerald-50 text-emerald-600",
-      statusLabel: "Waitlist Open",
+      statusLabel: "In Development",
       button:
         "bg-emerald-600 text-white hover:-translate-y-px hover:bg-emerald-700 hover:shadow-[0_8px_24px_rgba(5,150,105,0.18)]",
       link: "text-emerald-600",
@@ -114,7 +114,7 @@ const products: Product[] = [
     overviewLabel: "See Atlas overview",
     actionHref: "https://atlas.abzalinnovation.com",
     actionLabel: "Visit Atlas",
-    availabilityNote: "Live now for the Town of Glenville, NY.",
+    availabilityNote: "Explore Glenville zoning research; coverage varies by jurisdiction.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="10" r="3" />
@@ -127,7 +127,7 @@ const products: Product[] = [
       iconBg: "bg-amber-50",
       iconColor: "text-amber-500",
       status: "bg-amber-50 text-amber-600",
-      statusLabel: "Available Now",
+      statusLabel: "Explore the Site",
       button:
         "bg-amber-500 text-white hover:-translate-y-px hover:bg-amber-600 hover:shadow-[0_8px_24px_rgba(217,119,6,0.18)]",
       link: "text-amber-600",
@@ -148,7 +148,7 @@ const products: Product[] = [
     overviewLabel: "Open app support",
     actionHref: "/one-better",
     actionLabel: "View One Better",
-    availabilityNote: "Version 1.0.0 is being prepared for Google Play testing.",
+    availabilityNote: "Explore the app overview and ask about current Android availability.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 21V9" />
@@ -162,7 +162,7 @@ const products: Product[] = [
       iconBg: "bg-emerald-50",
       iconColor: "text-emerald-700",
       status: "bg-emerald-50 text-emerald-700",
-      statusLabel: "Play Release Prep",
+      statusLabel: "App Overview",
       button:
         "bg-emerald-700 text-white hover:-translate-y-px hover:bg-emerald-800 hover:shadow-[0_8px_24px_rgba(4,120,87,0.18)]",
       link: "text-emerald-700",
@@ -178,11 +178,11 @@ export default function Products() {
         <GradientHero
           actions={[
             { label: "Visit Volt", href: "https://volt.abzalinnovation.com" },
-            { label: "Join Build Waitlist", href: "/contact", variant: "secondary" },
+            { label: "Ask about Build", href: "/contact", variant: "secondary" },
           ]}
           actionsClassName="items-center justify-center"
           contentClassName="mx-auto max-w-[860px] text-center"
-          description="Choose the Abzal product that matches your work or your day. Volt and Land Use Atlas are live now, Build is open for early-interest conversations, and One Better is preparing for Google Play testing."
+          description="Choose the Abzal product that matches your work or your day. Volt and Land Use Atlas have dedicated sites, Build is open for early-interest conversations, and you can explore the One Better app overview."
           kicker="Products"
           meta={
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -190,25 +190,25 @@ export default function Products() {
                 className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
                 href="https://volt.abzalinnovation.com"
               >
-                Live now: Volt
+                Explore: Volt
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
                 href="https://atlas.abzalinnovation.com"
               >
-                Live now: Atlas
+                Explore: Atlas
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-[12px] font-semibold text-emerald-700 transition-all hover:-translate-y-px hover:border-emerald-300"
                 href="/contact"
               >
-                Waitlist open: Build
+                In development: Build
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-emerald-200 bg-white px-3 py-1.5 text-[12px] font-semibold text-emerald-800 transition-all hover:-translate-y-px hover:border-emerald-300"
                 href="/one-better"
               >
-                Play release prep: One Better
+                Explore One Better
               </Link>
             </div>
           }
@@ -384,13 +384,13 @@ export default function Products() {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-10 max-w-[720px]">
               <div className="mb-3 text-[13px] font-bold uppercase tracking-[0.08em] text-blue-600">
-                Shared Platform Roadmap
+                Product Roadmap
               </div>
               <h2 className="text-[36px] font-extrabold leading-[1.15] tracking-[-0.025em] text-navy">
-                Modules planned across the ecosystem.
+                Ideas for future product capabilities.
               </h2>
               <p className="mt-3 text-[17px] leading-[1.65] text-slate-600">
-                These are shared capabilities planned to support Abzal products
+                These are ideas being considered for Abzal products
                 over time. They are roadmap items, not separate live launches
                 today.
               </p>
@@ -434,7 +434,7 @@ export default function Products() {
             </h2>
             <p className="mx-auto mt-4 text-[17px] leading-[1.65] text-slate-400">
               Tell us about your workflow and we'll point you toward Volt,
-              Atlas, or the Build waitlist based on what you're actually trying
+              Atlas, or plans for Build based on what you're actually trying
               to solve.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

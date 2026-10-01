@@ -15,7 +15,11 @@ export function navigate(href: string, e?: React.MouseEvent) {
   // Same-page hash link — just scroll
   if (url.pathname === window.location.pathname && url.hash) {
     const el = document.getElementById(url.hash.slice(1));
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      if (window.location.hash !== url.hash) window.history.pushState(null, "", url.pathname + url.search + url.hash);
+      el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      el.focus({ preventScroll: true });
+    }
     return;
   }
 

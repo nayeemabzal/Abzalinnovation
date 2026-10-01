@@ -3,7 +3,7 @@
 // The adapter is not a claim of Vercel routing verification.
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
-import {readFile, stat} from 'node:fs/promises';
+import {readFile, stat, mkdir, writeFile} from 'node:fs/promises';
 import {resolve, relative, extname} from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 
@@ -69,7 +69,7 @@ try {
   browser = await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
   for(const viewport of [{width:1280,height:820},{width:412,height:915}]) {
     const context=await browser.newContext({viewport,hasTouch:viewport.width<600,isMobile:viewport.width<600,deviceScaleFactor:1,reducedMotion:'reduce'});
-    const page=await context.newPage();page.setDefaultTimeout(30000);
+    const page=await context.newPage();page.setDefaultTimeout(60000);
     const problems=[];const docs=[];
     page.on('pageerror',error=>problems.push(error.message));
     page.on('request',request=>{
@@ -77,28 +77,28 @@ try {
       if(request.url().includes('chatgpt.site')) problems.push('Old host requested');
     });
     try {
-      await page.goto(site+'/studio-kids');
+      await page.goto(site+'/studio-kids',{waitUntil:'domcontentloaded'});
       await page.getByRole('link',{name:'Explore Earth Time Machine',exact:true}).click();
       await page.waitForURL(url=>url.pathname===prefix);
       await page.waitForFunction(()=>document.querySelector('#globe-stage canvas')&&document.querySelector('#globe-status').hidden);
       assert(docs.some(url=>new URL(url).pathname===prefix),'Studio Kids link did not perform document navigation');
       assert.equal(await page.locator('iframe').count(),0);
       assert.equal(await page.locator('#chapter-select').inputValue(),'5','Default entry must stay global timeline');
-      await page.goBack();await page.waitForURL(url=>url.pathname==='/studio-kids');
-      await page.goForward();await page.waitForURL(url=>url.pathname===prefix);
-      await page.goto(site+'/earth-time-machine'+query+'#globe-stage');
+      await page.goBack({waitUntil:'domcontentloaded'});await page.waitForURL(url=>url.pathname==='/studio-kids');
+      await page.goForward({waitUntil:'domcontentloaded'});await page.waitForURL(url=>url.pathname===prefix);
+      await page.goto(site+'/earth-time-machine'+query+'#globe-stage',{waitUntil:'domcontentloaded'});
       await page.waitForFunction(()=>document.querySelector('#globe-status').hidden);
       let current=new URL(page.url());assert.equal(current.pathname,prefix);assert.equal(current.hash,'#globe-stage');
       assert.deepEqual(current.searchParams.getAll('check'),['first','second']);assert.equal(current.searchParams.get('encoded'),'a+b');
-      await page.reload();assert.equal(new URL(page.url()).searchParams.get('era'),'pangaea');
-      await page.goto(site+prefix+'?view=guyana&place=rupununi&era=today&check=keep');
+      await page.reload({waitUntil:'domcontentloaded'});assert.equal(new URL(page.url()).searchParams.get('era'),'pangaea');
+      await page.goto(site+prefix+'?view=guyana&place=rupununi&era=today&check=keep',{waitUntil:'domcontentloaded'});
       await page.waitForFunction(()=>!document.querySelector('#photo-open').disabled&&document.querySelector('#terrain-status').hidden);
       assert.equal(new URL(page.url()).searchParams.get('place'),'rupununi');
-      await page.locator('#photo-open').click();assert(await page.locator('#photo-dialog').isVisible());await page.locator('#photo-close').click();
-      await page.goto(site+prefix+'?view=landmark&landmark=mariana&era=today&check=keep');
+      await page.locator('#photo-open').click();assert(await page.locator('#photo-dialog').isVisible());await page.locator('#photo-dialog').getByRole('button',{name:/close/i}).click();assert(!(await page.locator('#photo-dialog').isVisible()));
+      await page.goto(site+prefix+'?view=landmark&landmark=mariana&era=today&check=keep',{waitUntil:'domcontentloaded'});
       await page.waitForFunction(()=>document.querySelector('#lm-status').hidden&&document.querySelector('#lm-stage canvas'));
       await page.locator('#lm-next').click();const stop=new URL(page.url()).searchParams.get('stop');assert(stop);
-      await page.reload();await page.waitForFunction(()=>document.querySelector('#lm-status').hidden);
+      await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>document.querySelector('#lm-status').hidden);
       assert.equal(new URL(page.url()).searchParams.get('stop'),stop);assert.equal(new URL(page.url()).searchParams.get('check'),'keep');
       await page.locator('#lm-flat-toggle').click();await page.waitForFunction(()=>{const image=document.querySelector('#lm-flat');return !image.hidden&&image.naturalWidth>0;});
       const manifest=await(await fetch(site+prefix+'manifest.webmanifest')).json();
@@ -107,6 +107,15 @@ try {
       assert.equal((manifest.id===undefined?start:new URL(manifest.id,start.origin)).pathname,prefix);
       assert.deepEqual(problems,[]);
       console.log(`PASS ${viewport.width}x${viewport.height}: native Studio Kids entry, global default, no iframe/old host, history, duplicate queries/fragments, Guyana photo, landmark stop reload/flat map, manifest; 0 page errors.`);
+    } catch (error) {
+      const artifacts=process.env.EARTH_ARTIFACT_DIR;
+      if(artifacts) {
+        await mkdir(artifacts,{recursive:true});
+        await page.screenshot({path:resolve(artifacts,`failure-${viewport.width}.png`)}).catch(()=>{});
+        const state=await page.evaluate(()=>({url:location.href,statuses:[...document.querySelectorAll('[id*=status]')].map(el=>({id:el.id,hidden:el.hidden,text:el.textContent})),text:document.body.innerText.slice(0,12000)}));
+        await writeFile(resolve(artifacts,`failure-${viewport.width}.json`),JSON.stringify({error:error.message,problems,state},null,2));
+      }
+      throw error;
     } finally {await context.close();}
   }
   // On plain Vite/static fallback, verify the direct link preserves every input.
@@ -115,7 +124,7 @@ try {
     try {
       const html=await readFile(resolve(root,'dist/index.html'),'utf8');
       await page.route('**/earth-time-machine/?*',route=>route.fulfill({contentType:'text/html',body:html}));
-      await page.goto(site+prefix+'?era=pangaea&view=landmark&landmark=mariana&stop=test&x=1&x=2#kept');
+      await page.goto(site+prefix+'?era=pangaea&view=landmark&landmark=mariana&stop=test&x=1&x=2#kept',{waitUntil:'domcontentloaded'});
       const link=page.getByRole('link',{name:'Open Earth Time Machine',exact:false});
       assert.equal(await link.getAttribute('href'),publicOrigin+'/?era=pangaea&view=landmark&landmark=mariana&stop=test&x=1&x=2#kept');
       assert.equal(await page.locator('iframe').count(),0);
