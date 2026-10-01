@@ -73,3 +73,8 @@ Existing physical-device, assistive-technology, actual mailbox-delivery,
 product commercial-access and static route-prerendering gaps remain open.
 These are explicit acceptance items, not evidence of an observed blocking
 main-site regression.
+
+
+## Final verified application checkpoint
+
+[Publication evidence and remaining acceptance criteria](PUBLICATION.md). Final source87acbc9 is deployed; JS/CSS exact hashes,14public views,249final local assertions, production Earth suite and five current-upstream proxy hashes pass. Documentation-only updates do not change tested application sources.

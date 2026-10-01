@@ -10,9 +10,13 @@ source_of_truth: ../_HUB/status.json
 
 # Status
 
-## Current website release candidate — 2026-10-01
+## Current published website — 2026-10-01
 
-The owner authorized recovery and publication. Canonical main is reconciled with
+The website is published and verified at www.abzalinnovation.com. Application
+source87acbc9 has successful Vercel Production6797018883. Final JS/CSS hashes,
+249local assertions,14public views and production Earth integration pass.
+See [publication and remaining acceptance](audit/MAIN_SITE_RELEASE_2026-10-01/PUBLICATION.md).
+Canonical main is reconciled with
 merged PR #1 (`e807c88`); the stale August lock is removed, 90 protected hashes
 and the two local documentation additions were preserved. Marketing regression
 passes249 assertions/zero browser errors; integrated build/TypeScript passes.
