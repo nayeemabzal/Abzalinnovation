@@ -78,3 +78,13 @@ Format: `## YYYY-MM-DD — Title` then bullets.
 ## Local main-site review — 2026-10-01
 
 Session `abzal-website-main-review-2026-10-01`. [Current local review](audit/MAIN_SITE_REVIEW_2026-10-01/REVIEW.md). Build passes;231 browser assertions/zero errors. Local unpublished marketing batch; remote PR1 merged, canonical checkout fast-forward blocked by existing index.lock. Older deployment/audit statements above are historical. Product/route boundaries preserved.
+
+
+## Published main website and style-source correction — 2026-10-01
+
+Main-site application a284b11 is pushed; Vercel Production6796816532 succeeded.
+Public marketing14views/zero browser errors and production Earth integration
+desktop/phone checks passed. Tailwind source scanning is now restricted to src
+so saved audit records cannot alter CSS. Final source-bounded build passes;
+see [release checklist](audit/MAIN_SITE_RELEASE_2026-10-01/RELEASE.md) for final
+regression/publication evidence and concrete remaining acceptance gaps.

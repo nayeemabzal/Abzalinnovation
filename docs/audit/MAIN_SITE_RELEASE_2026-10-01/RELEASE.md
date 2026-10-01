@@ -43,3 +43,33 @@ Run `npm run build`, start `npm run preview -- --host 127.0.0.1 --port 4176 --st
 Run `npm run test:earth` with the same Playwright module setting. `EARTH_ARTIFACT_DIR` optionally retains failures. Without `SITE_URL`, the suite uses a local routing adapter with live upstream, which is not Vercel routing verification. Set `SITE_URL=https://www.abzalinnovation.com` for GET-only production integration verification after publication.
 
 Local artifacts live beside this report: recovery hashes/doc snapshots, browser results/screenshots, and Earth diagnostics. Machine-local snapshots and unrelated `PROJECT.json`/earlier audits are excluded from the release commit. The linked existing-Vault summary is `Nayeem AI Command Center/02_PROJECTS/ABZAL_WEBSITE_MAIN_REVIEW_2026-10-01.md`; shared indexes are coordinator-owned and unchanged.
+
+## Production verification and reproducible-style correction
+
+Application commit `a284b11b2a9e4459df303983989e05d3f2934df6` was pushed and
+deployed successfully to Vercel Production6796816532 at2026-10-01T22:39:26Z.
+Deployment URL: https://abzalinnovation-n23lfgvax-nayeem-abzals-projects.vercel.app.
+Public marketing checks:14 desktop/phone views fit, zero browser errors,
+correct updated wording/navigation and apex-to-www redirect. Production Earth
+suite passed1280x820/412x915 entry, history, query/fragment, Guyana photo,
+landmark reload/flat map, manifest, routing/MIME and missing-asset checks.
+GitHub Actions workflows/check-runs are absent; Vercel status is successful.
+
+Production JS bytes matched the local JS exactly. The initial local-filename
+probe fetched SPA HTML because production uses different asset names. CSS then
+revealed extra utilities generated from untracked audit patch/docs. Tailwind
+automatically scans project text; the stylesheet now explicitly scans only
+`src`. This preserves the audit records and makes their contents irrelevant to
+the shipped CSS. [Official source-detection documentation](https://tailwindcss.com/docs/detecting-classes-in-source-files)
+describes `source()` and text-based scanning.
+
+Source-bounded build/TypeScript passed:70 modules, JS367.55KB/101.34KB gzip,
+CSS70.76KB/13.17KB gzip. Final asset names are `index-CsoLsS1H.js` and
+`index-DwVZmPxW.css`. The final marketing regression result and screenshots are
+retained under `source-bounded/`; publication of this correction is verified
+in the following checkpoint.
+
+Existing physical-device, assistive-technology, actual mailbox-delivery,
+product commercial-access and static route-prerendering gaps remain open.
+These are explicit acceptance items, not evidence of an observed blocking
+main-site regression.
