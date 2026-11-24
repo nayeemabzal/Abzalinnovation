@@ -27,11 +27,11 @@ const productGoals = [
     bg: "bg-blue-50",
     text: "text-blue-600",
     status: "Product Site",
-    note: "Visit the Volt site and ask about current access options.",
+    note: "Open the sample workspace to explore Volt without entering customer data.",
     goal: "Give electrical contractors a single platform to manage estimates, projects, finances, inspections, and crews — so they can run their entire business from one place.",
     audience: "Electrical contractors, shops, and service companies",
-    href: "https://volt.abzalinnovation.com",
-    linkLabel: "Visit Volt",
+    href: "https://volt.abzalinnovation.com/demo",
+    linkLabel: "Open Volt demo",
   },
   {
     name: "Abzal Build",
@@ -54,8 +54,8 @@ const productGoals = [
     note: "Explore Glenville zoning research; coverage varies by jurisdiction.",
     goal: "Turn zoning research and land-use review from a scattered, manual process into a structured, searchable, code-linked workflow — built by someone who does this work every day.",
     audience: "Municipal building departments, planning boards, and land-use professionals",
-    href: "https://atlas.abzalinnovation.com",
-    linkLabel: "Visit Atlas",
+    href: "https://atlas.abzalinnovation.com/atlas",
+    linkLabel: "Open Atlas map",
   },
 ];
 
@@ -191,13 +191,13 @@ export default function About() {
             <div className="fade-up d3 mt-6 flex flex-wrap items-center gap-2">
               <Link
                 className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
-                href="https://volt.abzalinnovation.com"
+                href="https://volt.abzalinnovation.com/demo"
               >
                 Explore: Volt
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
-                href="https://atlas.abzalinnovation.com"
+                href="https://atlas.abzalinnovation.com/atlas"
               >
                 Explore: Atlas
               </Link>
@@ -478,15 +478,15 @@ export default function About() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:-translate-y-px hover:bg-slate-50"
-                href="https://volt.abzalinnovation.com"
+                href="https://volt.abzalinnovation.com/demo"
               >
-                Visit Volt
+                Open Volt demo
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
-                href="https://atlas.abzalinnovation.com"
+                href="https://atlas.abzalinnovation.com/atlas"
               >
-                Visit Atlas
+                Open Atlas map
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-blue-600 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-blue-700"

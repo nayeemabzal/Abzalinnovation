@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && node scripts/assemble-showcase.mjs",
     "preview": "vite preview",
     "test:earth": "node scripts/test-earth-integration.mjs",
     "test:marketing": "node scripts/test-marketing.mjs"

@@ -4,6 +4,11 @@
       "source": "/earth-time-machine",
       "destination": "/earth-time-machine/",
       "permanent": false
+    },
+    {
+      "source": "/abzal-studio-kids",
+      "destination": "/studio-kids",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -15,6 +20,37 @@
       "source": "/earth-time-machine/:path*",
       "destination": "https://earth-time-machine-tan.vercel.app/:path*"
     },
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/atlas",
+      "destination": "/showcase/atlas.html"
+    },
+    {
+      "source": "/volt",
+      "destination": "/showcase/volt.html"
+    },
+    {
+      "source": "/build",
+      "destination": "/showcase/build.html"
+    },
+    {
+      "source": "/one-better",
+      "destination": "/showcase/one-better.html"
+    },
+    {
+      "source": "/studio",
+      "destination": "/showcase/music.html"
+    },
+    {
+      "source": "/studio-kids",
+      "destination": "/showcase/studio-kids.html"
+    },
+    {
+      "source": "/earth",
+      "destination": "/showcase/earth-time-machine.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/legacy-shell.html"
+    }
   ]
 }

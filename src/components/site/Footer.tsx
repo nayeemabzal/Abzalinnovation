@@ -3,8 +3,8 @@ import { BrandMark } from "./Header";
 import Link from "./Link";
 
 const launchLinks = [
-  { label: "Open Volt", href: "https://volt.abzalinnovation.com", tone: "live" },
-  { label: "Visit Atlas", href: "https://atlas.abzalinnovation.com", tone: "live" },
+  { label: "Open Volt demo", href: "https://volt.abzalinnovation.com/demo", tone: "live" },
+  { label: "Open Atlas map", href: "https://atlas.abzalinnovation.com/atlas", tone: "live" },
   { label: "Build in development", href: "/contact", tone: "waitlist" },
   {
     label: "Get Updates",

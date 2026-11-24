@@ -209,9 +209,9 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link
             className="hidden items-center justify-center rounded-[10px] bg-navy px-4 py-2 text-[0.82rem] font-semibold text-white transition-all hover:-translate-y-px hover:bg-slate-800 hover:shadow-[0_6px_20px_rgba(15,23,42,0.2)] sm:inline-flex"
-            href="https://volt.abzalinnovation.com"
+            href="https://volt.abzalinnovation.com/demo"
           >
-            Open Volt
+            Open Volt demo
           </Link>
 
           <button
@@ -276,10 +276,10 @@ export default function Header() {
             </nav>
             <Link
               className="mt-3 flex w-full items-center justify-center rounded-[10px] bg-navy px-4 py-2.5 text-[0.84rem] font-semibold text-white sm:hidden"
-              href="https://volt.abzalinnovation.com"
+              href="https://volt.abzalinnovation.com/demo"
               onClick={() => setMobileOpen(false)}
             >
-              Open Volt
+              Open Volt demo
             </Link>
           </div>
         </div>

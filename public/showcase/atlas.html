@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="theme-color" content="#0b0e13"><title>Land Use Atlas | Abzal Innovation</title><meta name="description" content="Explore parcel boundaries, zoning maps and land use in Land Use Atlas."><link rel="canonical" href="https://www.abzalinnovation.com/atlas"><meta property="og:type" content="website"><meta property="og:title" content="Land Use Atlas | Abzal Innovation"><meta property="og:description" content="Explore parcel boundaries, zoning maps and land use in Land Use Atlas."><meta property="og:url" content="https://www.abzalinnovation.com/atlas"><meta property="og:site_name" content="Abzal Innovation"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Land Use Atlas | Abzal Innovation"><meta name="twitter:description" content="Explore parcel boundaries, zoning maps and land use in Land Use Atlas."><link rel="icon" href="/abzal-logo.jpg"><link rel="stylesheet" href="/showcase/worlds.css"><link rel="stylesheet" href="/showcase/atlas-demo.css"><script defer src="/showcase/atlas-demo.js"></script></head><body class="product atlas"><a class="skip" href="#main">Skip to content</a><header class="topbar"><div class="wrap topinner"><a class="brand" href="/" aria-label="Abzal Innovation home"><img src="/abzal-logo.jpg" alt="Abzal Innovation" width="192" height="88"></a><nav aria-label="Main"><a href="/#work">Tools</a><a href="/#studio">Studios</a><a href="/#earth">Explore</a><a href="/about">About</a></nav></div></header><main id="main" style="--accent:#70d3ff"><section class="product-hero"><svg class="scene " viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><image href="/showcase/world-scenes.webp" width="1600" height="1000" preserveAspectRatio="none"/></svg><div class="product-shade"></div><div class="wrap product-inner"><a class="back" href="/#work">All divisions</a><div class="eyebrow">Land use & mapping</div><h1>Land Use Atlas</h1><h2>Know what a parcel can become.</h2><p>Research parcels, zoning districts and permitted uses in one place.</p><a class="primary" href="https://atlas.abzalinnovation.com/atlas">Open Land Use Atlas</a></div></section><section class="wrap atlas-lab" id="parcel-demo" aria-labelledby="demo-title">
+  <div class="atlas-lab-intro"><div class="eyebrow">Try an illustrative review</div><h2 id="demo-title">One parcel. Two districts.</h2><p>A parcel can cross a district line. Pick a base district to review its example uses. The overlay stays in view either way.</p></div>
+  <div class="atlas-lab-shell" data-atlas-demo>
+    <figure class="atlas-map-card">
+      <figcaption><span>PARCEL EXPLORER</span><strong>Demo parcel A-104</strong></figcaption>
+      <svg class="atlas-map" viewBox="0 0 460 310" role="img" aria-label="Illustrative property split into base districts Meadow and Junction. A separate blue dashed overlay crosses both.">
+        <defs><pattern id="atlas-a" width="13" height="13" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="13" height="13" fill="#183e32"/><path d="M0 0v13" stroke="#8ee2a1" stroke-opacity=".5" stroke-width="3"/></pattern><pattern id="atlas-b" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#483620"/><circle cx="5" cy="5" r="1.35" fill="#ffd280"/></pattern></defs>
+        <path d="M0 94h460M0 251h460M61 0v310M408 0v310M0 283l460-251" class="atlas-streets"/>
+        <path d="M86 63l139-16-13 207-111-9z" class="atlas-district atlas-a" fill="url(#atlas-a)"/>
+        <path d="M225 47l148 36-18 151-143 20z" class="atlas-district atlas-b" fill="url(#atlas-b)"/>
+        <path d="M86 63l139-16 148 36-18 151-143 20-111-9z" class="atlas-boundary"/>
+        <path d="M83 194l15 40 274-100 9-37z" class="atlas-overlay"/>
+        <g class="atlas-map-label" transform="translate(151 125)"><rect x="-25" y="-23" width="50" height="46" rx="11"/><text y="8">A</text></g>
+        <g class="atlas-map-label" transform="translate(297 190)"><rect x="-25" y="-23" width="50" height="46" rx="11"/><text y="8">B</text></g>
+        <text class="atlas-map-small" x="18" y="290">ILLUSTRATIVE MAP · NOT TO SCALE</text>
+      </svg>
+      <ul class="atlas-legend" aria-label="Map legend"><li><i class="atlas-key atlas-key-a" aria-hidden="true"></i>A · Meadow</li><li><i class="atlas-key atlas-key-b" aria-hidden="true"></i>B · Junction</li><li><i class="atlas-key atlas-key-overlay" aria-hidden="true"></i>Waterway overlay</li></ul>
+    </figure>
+    <div class="atlas-review">
+      <p class="atlas-count">2 base districts <span aria-hidden="true">·</span> 1 overlay</p>
+      <fieldset class="atlas-choices"><legend>Choose a working district</legend>
+        <label class="atlas-option"><input type="radio" name="atlas-district" value="meadow"><span><b>A</b> Meadow</span></label>
+        <label class="atlas-option"><input type="radio" name="atlas-district" value="junction"><span><b>B</b> Junction</span></label>
+      </fieldset>
+      <noscript><p>Enable JavaScript to compare the fictional districts, or open the live Atlas above.</p></noscript>
+      <div class="atlas-result" aria-live="polite" aria-atomic="true">
+        <p class="atlas-result-label" id="atlas-result-label">NO WORKING DISTRICT SELECTED</p>
+        <h3 id="atlas-result-title">Start with A or B</h3>
+        <p id="atlas-result-copy">The working district sets the context for this sample use review. It does not change the parcel’s boundaries.</p>
+        <p class="atlas-source" id="atlas-result-source" hidden></p>
+      </div>
+      <p class="atlas-overlay-note"><strong>Overlay stays visible.</strong> A real overlay can add separate review requirements.</p>
+      <p class="atlas-disclaimer">Fictional parcel and rules. Not a real zoning determination.</p>
+    </div>
+  </div>
+</section></main><footer class="wrap footer"><strong>Abzal Innovation LLC</strong><a href="/products">Products</a><a href="/faq">FAQ</a><a href="/privacy-policy">Privacy</a><a href="/terms-of-use">Terms</a><a href="/contact">Contact</a></footer></body></html>

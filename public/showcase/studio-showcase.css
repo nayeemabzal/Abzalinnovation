@@ -1,0 +1,50 @@
+/* Studio product extensions: scoped to these two routes. */
+.studio-showcase{--panel:#14101d;--edge:#8f66bd55;--muted:#d4c8df}
+.studio-kids .studio-showcase{--panel:#232028;--edge:#f4b39b55;--muted:#e5d2cc}
+.studio-showcase .studio-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.studio-showcase .studio-secondary,.studio-showcase .studio-platform,.studio-showcase .studio-link{color:#fff;text-decoration:none;border-bottom:0}
+.studio-showcase .studio-secondary{display:inline-flex;min-height:44px;align-items:center;padding:.55rem 1rem;border:1px solid var(--edge);border-radius:10px;background:#100c19c9}
+.studio-showcase .studio-secondary:hover,.studio-showcase .studio-link:hover{text-decoration:underline;text-underline-offset:.22em}
+.studio-showcase .studio-section{padding-block:clamp(2.5rem,6vw,5rem);scroll-margin-top:6rem}
+.studio-showcase .studio-section+.studio-section{border-top:1px solid var(--edge)}
+.studio-showcase .studio-heading{margin:0 0 1.4rem;max-width:44rem}
+.studio-showcase .studio-heading h2,.studio-showcase .studio-feature-copy h2{font-size:clamp(1.85rem,4.3vw,3.3rem);line-height:1.06;margin:.45rem 0 .75rem;letter-spacing:-.04em;color:#fff}
+.studio-showcase .studio-heading p,.studio-showcase .studio-feature-copy p,.studio-showcase .studio-track p{color:var(--muted);margin:0 0 1rem}
+.studio-showcase .studio-platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,215px),1fr));gap:.8rem}
+.studio-showcase .studio-platform{display:flex;align-items:center;gap:.9rem;min-height:86px;border:1px solid var(--edge);background:linear-gradient(130deg,#382747,var(--panel));border-radius:14px;padding:1rem}
+.studio-showcase .studio-platform:hover,.studio-showcase .studio-chip:hover{border-color:var(--accent)}
+.studio-showcase .studio-platform b{display:block;font-size:1.13rem;color:#fff}
+.studio-showcase .studio-platform small{display:block;color:var(--muted);margin-top:.13rem}
+.studio-showcase .studio-platform-mark{display:grid;place-items:center;width:2.35rem;height:2.35rem;flex:none;border-radius:10px;background:var(--accent);color:#20122e;font-weight:900}
+.studio-showcase .studio-more{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem;margin:1rem 0 0;padding:0}
+.studio-showcase .studio-more:empty{display:none}
+.studio-showcase .studio-chip{display:inline-flex;align-items:center;color:#fff;min-height:44px;padding:.45rem .85rem;border:1px solid var(--edge);border-radius:999px;text-decoration:none;background:var(--panel)}
+.studio-showcase .studio-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.studio-showcase .studio-feature,.studio-showcase .studio-track,.studio-showcase .studio-note{overflow:hidden;min-width:0;border:1px solid var(--edge);border-radius:16px;background:var(--panel)}
+.studio-showcase .studio-feature-copy,.studio-showcase .studio-track,.studio-showcase .studio-note{padding:clamp(1rem,3vw,1.6rem)}
+.studio-showcase .studio-feature h3,.studio-showcase .studio-track h3,.studio-showcase .studio-note h3{margin:.35rem 0 .5rem;color:#fff;font-size:clamp(1.17rem,2vw,1.65rem);line-height:1.16}
+.studio-showcase .studio-video{display:grid;place-items:center;aspect-ratio:16/9;position:relative;background:radial-gradient(ellipse at 65% 20%,#684b7d,#21192f 62%);overflow:hidden}
+.studio-kids .studio-showcase .studio-video{background:radial-gradient(ellipse at 65% 20%,#925d71,#413148 62%)}
+.studio-showcase .studio-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;color:transparent}
+.studio-showcase .studio-play{position:relative;display:grid;place-items:center;width:3.35rem;height:3.35rem;border-radius:50%;background:#100b179e;box-shadow:0 0 0 1px #fff9;color:white;font-size:1.2rem;line-height:1}
+.studio-showcase .studio-video:hover .studio-play{background:#100b17}
+.studio-showcase .studio-link{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-weight:700}
+.studio-showcase .studio-tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr));gap:.85rem}
+.studio-showcase .studio-kid-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(1rem,4vw,3rem);align-items:center}
+.studio-showcase .studio-steps{color:var(--muted);padding-inline-start:1.35rem;line-height:1.62}
+.studio-showcase .studio-steps li+li{margin-top:.45rem}
+.studio-showcase .studio-steps strong,.studio-showcase .studio-note strong{color:#fff}
+.studio-showcase a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.studio-showcase .studio-video:focus-visible{outline-offset:-5px}
+@media(max-width:620px){.studio-showcase .studio-kid-grid,.studio-showcase .studio-features{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.studio-showcase *, .studio-showcase *::before,.studio-showcase *::after{animation:none!important;transition:none!important}}
+
+
+.studio-showcase .studio-platform[style*="--platform"]{background:linear-gradient(133deg,color-mix(in srgb,var(--platform) 21%,#171320),#1b1723 80%);border-top:2px solid var(--platform)}.studio-showcase .studio-platform .studio-platform-mark{background:var(--platform,var(--accent));color:#150e1d}.studio-showcase .studio-platform b{font-weight:800}
+.studio-kids .studio-showcase .studio-kindle{display:grid;grid-template-columns:minmax(10rem,19rem) minmax(0,1fr);gap:clamp(1rem,4vw,3rem);align-items:center;padding:clamp(1rem,4vw,3rem);background:radial-gradient(ellipse at 18% 28%,#713b5d73,transparent 57%),var(--panel)}
+.studio-kids .studio-showcase .studio-kindle-cover{width:100%;max-width:18rem;margin-inline:auto}
+.studio-kids .studio-showcase .studio-kindle-cover img{display:block;width:100%;height:auto;border-radius:.5rem;box-shadow:0 1rem 2rem #120d1d9e}
+.studio-kids .studio-showcase .studio-kindle .studio-feature-copy{padding:0}
+.studio-kids .studio-showcase .studio-kindle-subtitle{font-weight:700;color:#fff3ef}
+.studio-kids .studio-showcase .studio-kindle-status{margin-bottom:0}
+@media(max-width:620px){.studio-kids .studio-showcase .studio-kindle{grid-template-columns:minmax(0,1fr)}.studio-kids .studio-showcase .studio-kindle-cover{max-width:13rem}}

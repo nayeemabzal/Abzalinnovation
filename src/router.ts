@@ -1,6 +1,7 @@
 // Lightweight SPA router — pushState navigation with event dispatch
 
 const ROUTE_CHANGE_EVENT = "routechange";
+const SHOWCASE_ROUTES = new Set(["/", "/atlas", "/volt", "/build", "/one-better", "/studio", "/studio-kids", "/abzal-studio-kids", "/earth"]);
 
 /** Push a new route and trigger re-render. */
 export function navigate(href: string, e?: React.MouseEvent) {
@@ -20,6 +21,11 @@ export function navigate(href: string, e?: React.MouseEvent) {
       el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
       el.focus({ preventScroll: true });
     }
+    return;
+  }
+
+  if (import.meta.env.PROD && SHOWCASE_ROUTES.has(url.pathname.replace(/\/+$/, "") || "/")) {
+    window.location.assign(url.href);
     return;
   }
 

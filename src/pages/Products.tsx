@@ -46,9 +46,9 @@ const products: Product[] = [
       "Replaces the stack of spreadsheets, paper forms, and disconnected apps that most electrical contractors use to manage estimates, projects, finances, inspections, and crews.",
     overviewHref: "/volt",
     overviewLabel: "See Volt overview",
-    actionHref: "https://volt.abzalinnovation.com",
-    actionLabel: "Visit Volt",
-    availabilityNote: "Visit the Volt site and ask about current access options.",
+    actionHref: "https://volt.abzalinnovation.com/demo",
+    actionLabel: "Open Volt demo",
+    availabilityNote: "Open the sample workspace to explore Volt without entering customer data.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
@@ -112,8 +112,8 @@ const products: Product[] = [
       "Replaces manual zoning lookups, paper-based review processes, and fragmented regulatory data with searchable, structured intelligence that connects directly to municipal code.",
     overviewHref: "/atlas",
     overviewLabel: "See Atlas overview",
-    actionHref: "https://atlas.abzalinnovation.com",
-    actionLabel: "Visit Atlas",
+    actionHref: "https://atlas.abzalinnovation.com/atlas",
+    actionLabel: "Open Atlas map",
     availabilityNote: "Explore Glenville zoning research; coverage varies by jurisdiction.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -177,7 +177,7 @@ export default function Products() {
       hero={
         <GradientHero
           actions={[
-            { label: "Visit Volt", href: "https://volt.abzalinnovation.com" },
+            { label: "Open Volt demo", href: "https://volt.abzalinnovation.com/demo" },
             { label: "Ask about Build", href: "/contact", variant: "secondary" },
           ]}
           actionsClassName="items-center justify-center"
@@ -188,13 +188,13 @@ export default function Products() {
             <div className="flex flex-wrap items-center justify-center gap-2">
               <Link
                 className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-[12px] font-semibold text-blue-700 transition-all hover:-translate-y-px hover:border-blue-300"
-                href="https://volt.abzalinnovation.com"
+                href="https://volt.abzalinnovation.com/demo"
               >
                 Explore: Volt
               </Link>
               <Link
                 className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-[12px] font-semibold text-amber-700 transition-all hover:-translate-y-px hover:border-amber-300"
-                href="https://atlas.abzalinnovation.com"
+                href="https://atlas.abzalinnovation.com/atlas"
               >
                 Explore: Atlas
               </Link>
@@ -440,15 +440,15 @@ export default function Products() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:-translate-y-px hover:bg-slate-50"
-                href="https://volt.abzalinnovation.com"
+                href="https://volt.abzalinnovation.com/demo"
               >
-                Visit Volt
+                Open Volt demo
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
-                href="https://atlas.abzalinnovation.com"
+                href="https://atlas.abzalinnovation.com/atlas"
               >
-                Visit Atlas
+                Open Atlas map
               </Link>
               <Link
                 className="inline-flex items-center justify-center rounded-[10px] bg-blue-600 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-blue-700"

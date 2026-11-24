@@ -7,14 +7,14 @@ const currentStatus = [
     label: "Explore the site",
     title: "Abzal Volt",
     detail: "Electrical contractor operations platform",
-    href: "https://volt.abzalinnovation.com",
+    href: "https://volt.abzalinnovation.com/demo",
     tone: "blue",
   },
   {
     label: "Explore the site",
     title: "Land Use Atlas",
     detail: "Glenville zoning research",
-    href: "https://atlas.abzalinnovation.com",
+    href: "https://atlas.abzalinnovation.com/atlas",
     tone: "amber",
   },
   {
@@ -44,7 +44,7 @@ export default function FAQ() {
   return (
     <PageShell
       actions={[
-        { label: "Visit Volt", href: "https://volt.abzalinnovation.com" },
+        { label: "Open Volt demo", href: "https://volt.abzalinnovation.com/demo" },
         { label: "Ask about Build", href: "/contact", variant: "secondary" },
       ]}
       description="Quick answers about Abzal Innovation, product access, and how to get started with Volt, Atlas, or plans for Build."
@@ -175,15 +175,15 @@ export default function FAQ() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               className="inline-flex items-center justify-center rounded-[10px] bg-white px-6 py-3 text-[14px] font-semibold text-navy transition-all hover:-translate-y-px hover:bg-slate-50"
-              href="https://volt.abzalinnovation.com"
+              href="https://volt.abzalinnovation.com/demo"
             >
-              Visit Volt
+              Open Volt demo
             </Link>
             <Link
               className="inline-flex items-center justify-center rounded-[10px] border border-white/20 bg-white/5 px-6 py-3 text-[14px] font-semibold text-white backdrop-blur-sm transition-all hover:border-white/40 hover:bg-white/10"
-              href="https://atlas.abzalinnovation.com"
+              href="https://atlas.abzalinnovation.com/atlas"
             >
-              Visit Atlas
+              Open Atlas map
             </Link>
             <Link
               className="inline-flex items-center justify-center rounded-[10px] bg-blue-600 px-6 py-3 text-[14px] font-semibold text-white transition-all hover:-translate-y-px hover:bg-blue-700"
